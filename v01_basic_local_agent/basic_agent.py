@@ -10,8 +10,8 @@ from google.genai import types
 # The Gemini SDK automatically looks for the GEMINI_API_KEY environment variable.
 load_dotenv()
 
-# We specify the model we want to use. gemini-2.5-flash is fast and great for general agents.
-MODEL_NAME = os.getenv("MODEL_NAME", "gemini-2.5-flash")
+# We specify the model we want to use. gemini-3.8-flash-8b is smaller, faster, and highly available.
+MODEL_NAME = os.getenv("MODEL_NAME", "gemini-3.8-flash-8b")
 
 # Initialize the Gemini client
 # It will automatically pick up the GEMINI_API_KEY from the environment
