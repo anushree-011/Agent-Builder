@@ -1,981 +1,706 @@
-# ============================================================
-# V9 - RAG KNOWLEDGE SYSTEM
-# ============================================================
-#
-# What are we building?
-#
-# RAG = Retrieval-Augmented Generation
-#
-# The basic idea is:
-#
-#       DOCUMENT
-#           ↓
-#       CHUNKS
-#           ↓
-#      EMBEDDINGS
-#           ↓
-#      VECTOR STORE
-#           ↓
-#      USER QUESTION
-#           ↓
-#      RETRIEVE RELEVANT CHUNKS
-#           ↓
-#      SEND CONTEXT TO LLM
-#           ↓
-#         ANSWER
-#
-# In this version we are intentionally building the core RAG
-# pipeline ourselves instead of using LangChain or LlamaIndex.
-#
-# This will help us understand what RAG actually does.
-# ============================================================
+"""
+============================================================
+V9 - RAG KNOWLEDGE SYSTEM
+============================================================
 
+This version teaches:
 
-# ============================================================
-# STEP 1 - IMPORT REQUIRED LIBRARIES
-# ============================================================
+1. Document loading
+2. Text chunking
+3. Embeddings
+4. Vector storage
+5. Similarity search
+6. Retrieval
+7. Grounded generation
+8. Ollama Cloud integration
 
-# os
-# Used for working with file paths and environment variables.
+Architecture:
+
+Knowledge Base
+      ↓
+   Chunking
+      ↓
+ Embedding Model
+      ↓
+ Vector Store
+      ↓
+ User Question
+      ↓
+ Question Embedding
+      ↓
+ Similarity Search
+      ↓
+ Relevant Chunks
+      ↓
+ Ollama Cloud
+      ↓
+ Final Answer
+============================================================
+"""
+
 import os
-
-# json
-# Used to save our vector store to a JSON file.
 import json
-
-# requests
-# Used to communicate with the Ollama Cloud API.
 import requests
 
-# numpy
-# Used for mathematical operations on embeddings/vectors.
 import numpy as np
 
-# load_dotenv
-# Used to load values from our .env file.
 from dotenv import load_dotenv
+from sentence_transformers import SentenceTransformer
 
 
 # ============================================================
-# STEP 2 - LOAD ENVIRONMENT VARIABLES
+# STEP 1 - LOAD ENVIRONMENT VARIABLES
 # ============================================================
 
-# This reads the .env file from the project.
 load_dotenv()
 
 
-# Read our Ollama API key.
 OLLAMA_API_KEY = os.getenv("OLLAMA_API_KEY")
 
-# Read the Ollama API base URL.
 OLLAMA_BASE_URL = os.getenv(
     "OLLAMA_BASE_URL",
     "https://ollama.com/api"
 )
 
-# Model used for generating the final answer.
 MODEL_NAME = os.getenv(
     "MODEL_NAME",
     "gemma4:31b"
 )
 
-# Model used for converting text into embeddings.
-EMBEDDING_MODEL = os.getenv(
+EMBEDDING_MODEL_NAME = os.getenv(
     "EMBEDDING_MODEL",
-    "embeddinggemma"
+    "BAAI/bge-small-en-v1.5"
 )
 
 
 # ============================================================
-# STEP 3 - DEFINE FILE PATHS
+# STEP 2 - FILE PATHS
 # ============================================================
 
-# Find the directory where this Python file is located.
-BASE_DIR = os.path.dirname(
-    os.path.abspath(__file__)
-)
+# Folder containing this Python file
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Our knowledge document.
-DOCUMENT_PATH = os.path.join(
+
+# Knowledge base file
+KNOWLEDGE_FILE = os.path.join(
     BASE_DIR,
     "agentic_ai_knowledge.txt"
 )
 
-# This file will contain our chunks and embeddings.
-#
-# We don't have to create this file manually.
-# The program will create it.
-VECTOR_STORE_PATH = os.path.join(
+
+# Vector store file
+VECTOR_STORE_FILE = os.path.join(
     BASE_DIR,
     "vector_store.json"
 )
 
 
 # ============================================================
-# STEP 4 - BASIC VALIDATION
+# STEP 3 - RAG SETTINGS
 # ============================================================
 
-# Make sure the API key exists.
+# Number of words in each chunk
+CHUNK_SIZE = 500
+
+
+# Number of overlapping words between chunks
+CHUNK_OVERLAP = 100
+
+
+# Number of relevant chunks retrieved
+TOP_K = 5
+
+
+# Minimum similarity required
+SIMILARITY_THRESHOLD = 0.35
+
+
+# ============================================================
+# STEP 4 - DISPLAY CONFIGURATION
+# ============================================================
+
+print()
+print("=" * 60)
+print("        V9 - RAG KNOWLEDGE SYSTEM")
+print("=" * 60)
+
+print()
+print("LLM:")
+print(f"  {MODEL_NAME}")
+
+print()
+print("Embedding Model:")
+print(f"  {EMBEDDING_MODEL_NAME}")
+
+print()
+print("Knowledge Base:")
+print(f"  {KNOWLEDGE_FILE}")
+
+print()
+
+
+# ============================================================
+# STEP 5 - CHECK OLLAMA API KEY
+# ============================================================
+
 if not OLLAMA_API_KEY:
 
-    print("ERROR: OLLAMA_API_KEY was not found.")
-
-    print(
-        "Please check your .env file."
-    )
-
-    exit()
-
-
-# Make sure our knowledge document exists.
-if not os.path.exists(DOCUMENT_PATH):
-
-    print(
-        "ERROR: Knowledge document was not found:"
-    )
-
-    print(DOCUMENT_PATH)
+    print("ERROR:")
+    print("OLLAMA_API_KEY is missing from .env")
 
     exit()
 
 
 # ============================================================
-# STEP 5 - CREATE HEADERS FOR OLLAMA CLOUD
+# STEP 6 - LOAD EMBEDDING MODEL
 # ============================================================
 
-# Ollama Cloud requires authentication using our API key.
-HEADERS = {
-    "Authorization": f"Bearer {OLLAMA_API_KEY}",
-    "Content-Type": "application/json"
-}
+print("Loading embedding model...")
+print(f"Model: {EMBEDDING_MODEL_NAME}")
+print()
+
+print(
+    "IMPORTANT:"
+)
+print(
+    "The first run may take time because the embedding model"
+)
+print(
+    "needs to be downloaded."
+)
+print()
+
+
+embedding_model = SentenceTransformer(
+    EMBEDDING_MODEL_NAME
+)
+
+
+print("Embedding model loaded successfully.")
+print()
 
 
 # ============================================================
-# STEP 6 - READ THE KNOWLEDGE DOCUMENT
+# STEP 7 - LOAD KNOWLEDGE BASE
 # ============================================================
 
-def load_document():
+def load_knowledge_base():
     """
-    Read the entire knowledge document.
-
-    Our source file is:
-
-        agentic_ai_knowledge.txt
-
-    The function returns the complete text.
+    Read the knowledge base text file.
     """
 
-    print("\nLoading knowledge document...")
+    if not os.path.exists(KNOWLEDGE_FILE):
+
+        raise FileNotFoundError(
+            f"Knowledge file not found: {KNOWLEDGE_FILE}"
+        )
 
     with open(
-        DOCUMENT_PATH,
+        KNOWLEDGE_FILE,
         "r",
         encoding="utf-8"
     ) as file:
 
         text = file.read()
 
-    print(
-        f"Document loaded successfully."
-    )
-
-    print(
-        f"Characters: {len(text)}"
-    )
-
     return text
 
 
 # ============================================================
-# STEP 7 - SPLIT DOCUMENT INTO CHUNKS
+# STEP 8 - SPLIT DOCUMENT INTO CHUNKS
 # ============================================================
 
-def create_chunks(
-    text,
-    chunk_size=500,
-    overlap=100
-):
+def create_chunks(text):
     """
-    Split a large document into smaller pieces.
-
-    Why do we need chunks?
-
-    Imagine our document has 20,000 words.
-
-    We don't want to send all 20,000 words to the LLM
-    every time the user asks one small question.
-
-    Instead:
-
-        Large document
-              ↓
-        Smaller chunks
-              ↓
-        Retrieve only useful chunks
-              ↓
-        Send those chunks to LLM
-
-    chunk_size:
-        Approximate number of words in each chunk.
-
-    overlap:
-        Number of words shared between neighboring chunks.
+    Split the knowledge base into overlapping word chunks.
 
     Example:
 
-        Chunk 1:
-        A B C D E F G
+    Chunk 1:
+    words 1 - 500
 
-        Chunk 2:
-        F G H I J K L
+    Chunk 2:
+    words 401 - 900
 
-    F and G are the overlap.
-
-    This helps prevent losing context between chunks.
+    Chunk 3:
+    words 801 - 1300
     """
 
-    print("\nCreating document chunks...")
-
-    # Convert the complete document into individual words.
     words = text.split()
 
     chunks = []
 
-    # Start position of our first chunk.
     start = 0
 
-    # Continue until we reach the end of the document.
     while start < len(words):
 
-        # Calculate the end position.
-        end = start + chunk_size
+        end = start + CHUNK_SIZE
 
-        # Take the words for this chunk.
         chunk_words = words[start:end]
 
-        # Convert the words back into a string.
         chunk = " ".join(chunk_words)
 
-        # Only save non-empty chunks.
         if chunk.strip():
 
             chunks.append(chunk)
 
-        # Move forward.
-
-        # We subtract overlap so that some words
-        # are shared with the next chunk.
-        start += chunk_size - overlap
-
-    print(
-        f"Created {len(chunks)} chunks."
-    )
+        start += CHUNK_SIZE - CHUNK_OVERLAP
 
     return chunks
 
 
 # ============================================================
-# STEP 8 - CREATE EMBEDDING
+# STEP 9 - CREATE EMBEDDINGS
 # ============================================================
 
-def create_embedding(text):
+def create_embeddings(chunks):
     """
-    Convert text into a numerical vector.
+    Convert each text chunk into an embedding vector.
 
-    Example:
-
-        "What is RAG?"
-
-    becomes something conceptually like:
-
-        [0.12, -0.43, 0.77, 0.21, ...]
-
-    These numbers represent the meaning of the text
-    in a mathematical vector space.
-
-    We use the Ollama Cloud embedding API.
+    normalize_embeddings=True makes cosine similarity
+    easier because we can use a dot product.
     """
 
-    url = f"{OLLAMA_BASE_URL}/embed"
+    print("Creating embeddings...")
+    print(f"Number of chunks: {len(chunks)}")
+    print()
 
-    payload = {
-        "model": EMBEDDING_MODEL,
-        "input": text
-    }
+    embeddings = embedding_model.encode(
+        chunks,
+        batch_size=8,
+        show_progress_bar=True,
+        normalize_embeddings=True,
+        convert_to_numpy=True
+    )
 
-    try:
-
-        response = requests.post(
-            url,
-            headers=HEADERS,
-            json=payload,
-            timeout=120
-        )
-
-        # If the API returned an error,
-        # this will raise an exception.
-        response.raise_for_status()
-
-        data = response.json()
-
-        # Ollama returns embeddings inside
-        # the "embeddings" field.
-        embedding = data["embeddings"][0]
-
-        return embedding
-
-    except requests.exceptions.RequestException as error:
-
-        print("\nEmbedding API error:")
-        print(error)
-
-        # Try to display the API response.
-        try:
-            print(
-                response.text
-            )
-        except:
-            pass
-
-        raise
+    return embeddings
 
 
 # ============================================================
-# STEP 9 - BUILD THE VECTOR STORE
+# STEP 10 - SAVE VECTOR STORE
 # ============================================================
 
-def build_vector_store(chunks):
+def save_vector_store(chunks, embeddings):
     """
-    Create embeddings for every document chunk.
+    Save chunks and their embeddings to JSON.
 
-    We store:
-
-        chunk
-        embedding
-        chunk_id
-
-    inside vector_store.json.
-
-    This is our simple local vector database.
-
-    In later versions we can replace this with
-    Chroma, FAISS, Qdrant, etc.
+    This allows us to reuse the embeddings instead of
+    creating them every time the program starts.
     """
 
-    print("\nBuilding vector store...")
-
-    vector_store = []
-
-    total_chunks = len(chunks)
+    data = []
 
     for index, chunk in enumerate(chunks):
 
-        print(
-            f"Creating embedding "
-            f"{index + 1}/{total_chunks}..."
+        data.append(
+            {
+                "id": index,
+                "text": chunk,
+                "embedding": embeddings[index].tolist()
+            }
         )
 
-        # Convert the chunk into a vector.
-        embedding = create_embedding(chunk)
-
-        # Store the chunk and its vector.
-        vector_store.append({
-
-            "chunk_id": index,
-
-            "text": chunk,
-
-            "embedding": embedding
-
-        })
-
-    # Save the vector store to disk.
     with open(
-        VECTOR_STORE_PATH,
+        VECTOR_STORE_FILE,
         "w",
         encoding="utf-8"
     ) as file:
 
         json.dump(
-            vector_store,
+            data,
             file
         )
 
-    print(
-        "\nVector store created successfully."
-    )
-
-    print(
-        f"Saved to: {VECTOR_STORE_PATH}"
-    )
-
-    return vector_store
+    print()
+    print("Vector store saved:")
+    print(VECTOR_STORE_FILE)
 
 
 # ============================================================
-# STEP 10 - LOAD EXISTING VECTOR STORE
+# STEP 11 - LOAD VECTOR STORE
 # ============================================================
 
 def load_vector_store():
     """
-    Load previously created embeddings.
-
-    Why do we do this?
-
-    We don't want to create embeddings every time
-    the program starts.
-
-    Embeddings can take time and API calls.
-
-    Therefore:
-
-        First run:
-        Document
-            ↓
-        Create embeddings
-            ↓
-        Save vector_store.json
-
-        Next runs:
-        Load vector_store.json directly.
+    Load previously created vectors.
     """
 
-    print(
-        "\nLoading existing vector store..."
-    )
-
     with open(
-        VECTOR_STORE_PATH,
+        VECTOR_STORE_FILE,
         "r",
         encoding="utf-8"
     ) as file:
 
-        vector_store = json.load(file)
+        data = json.load(file)
+
+    chunks = [
+        item["text"]
+        for item in data
+    ]
+
+    embeddings = np.array(
+        [
+            item["embedding"]
+            for item in data
+        ],
+        dtype=np.float32
+    )
+
+    return chunks, embeddings
+
+
+# ============================================================
+# STEP 12 - BUILD OR LOAD VECTOR STORE
+# ============================================================
+
+def prepare_vector_store():
+
+    if os.path.exists(VECTOR_STORE_FILE):
+
+        print("Existing vector store found.")
+        print("Loading vector store...")
+        print()
+
+        chunks, embeddings = load_vector_store()
+
+        print(
+            f"Loaded {len(chunks)} chunks."
+        )
+
+        return chunks, embeddings
+
+    print("No vector store found.")
+    print("Building a new vector store...")
+    print()
+
+    knowledge = load_knowledge_base()
+
+    chunks = create_chunks(
+        knowledge
+    )
 
     print(
-        f"Loaded {len(vector_store)} chunks."
+        f"Created {len(chunks)} chunks."
     )
 
-    return vector_store
+    embeddings = create_embeddings(
+        chunks
+    )
+
+    save_vector_store(
+        chunks,
+        embeddings
+    )
+
+    return chunks, embeddings
 
 
 # ============================================================
-# STEP 11 - CALCULATE COSINE SIMILARITY
+# STEP 13 - CREATE QUERY EMBEDDING
 # ============================================================
 
-def cosine_similarity(vector_a, vector_b):
+def create_query_embedding(question):
     """
-    Calculate cosine similarity between two vectors.
-
-    Why?
-
-    We need to determine:
-
-        How similar is the user's question
-        to each document chunk?
-
-    Example:
-
-        Question:
-        "What is RAG?"
-
-        Chunk A:
-        Information about RAG
-
-        Chunk B:
-        Information about Git
-
-    Chunk A should have a higher similarity score.
-
-    Cosine similarity returns a score based on
-    the direction of the vectors.
+    Convert the user's question into an embedding.
     """
 
-    # Convert lists into NumPy arrays.
-    a = np.array(
-        vector_a,
-        dtype=np.float32
+    embedding = embedding_model.encode(
+        question,
+        normalize_embeddings=True,
+        convert_to_numpy=True
     )
 
-    b = np.array(
-        vector_b,
-        dtype=np.float32
-    )
-
-    # Calculate the dot product.
-    dot_product = np.dot(a, b)
-
-    # Calculate vector magnitudes.
-    norm_a = np.linalg.norm(a)
-    norm_b = np.linalg.norm(b)
-
-    # Avoid division by zero.
-    if norm_a == 0 or norm_b == 0:
-
-        return 0.0
-
-    # Cosine similarity formula.
-    similarity = (
-        dot_product /
-        (norm_a * norm_b)
-    )
-
-    return float(similarity)
+    return embedding
 
 
 # ============================================================
-# STEP 12 - SEARCH THE VECTOR STORE
+# STEP 14 - SEARCH FOR RELEVANT CHUNKS
 # ============================================================
 
-def search_vector_store(
+def search_knowledge(
     question,
-    vector_store,
-    top_k=5
+    chunks,
+    embeddings
 ):
     """
-    Find the most relevant chunks for a question.
+    Find the chunks most similar to the question.
 
-    Steps:
+    Because both vectors are normalized:
 
-    1. Convert question into an embedding.
-    2. Compare question embedding against every chunk.
-    3. Calculate similarity scores.
-    4. Sort chunks by similarity.
-    5. Return the best chunks.
-
-    top_k=5 means:
-
-        Return the 5 most relevant chunks.
+        cosine similarity
+              =
+        dot product
     """
 
-    print(
-        "\nSearching knowledge base..."
-    )
-
-    # Create an embedding for the user's question.
-    question_embedding = create_embedding(
+    query_embedding = create_query_embedding(
         question
     )
 
-    scored_chunks = []
-
-    # Compare question against every stored chunk.
-    for item in vector_store:
-
-        similarity = cosine_similarity(
-
-            question_embedding,
-
-            item["embedding"]
-
-        )
-
-        scored_chunks.append({
-
-            "chunk_id": item["chunk_id"],
-
-            "text": item["text"],
-
-            "score": similarity
-
-        })
-
-    # Sort by similarity score.
-    #
-    # reverse=True means highest score first.
-    scored_chunks.sort(
-        key=lambda item: item["score"],
-        reverse=True
+    similarities = np.dot(
+        embeddings,
+        query_embedding
     )
 
-    # Return only the top K results.
-    top_results = scored_chunks[:top_k]
+    # Sort from highest similarity to lowest
+    ranked_indices = np.argsort(
+        similarities
+    )[::-1]
 
-    return top_results
+    results = []
+
+    for index in ranked_indices[:TOP_K]:
+
+        score = float(
+            similarities[index]
+        )
+
+        if score >= SIMILARITY_THRESHOLD:
+
+            results.append(
+                {
+                    "text": chunks[index],
+                    "score": score
+                }
+            )
+
+    return results
 
 
 # ============================================================
-# STEP 13 - DISPLAY RETRIEVED CHUNKS
+# STEP 15 - DISPLAY RETRIEVED INFORMATION
 # ============================================================
 
 def display_retrieved_chunks(results):
-    """
-    Display the chunks retrieved from the knowledge base.
 
-    This is extremely useful while learning RAG.
+    print()
+    print("=" * 60)
+    print("RETRIEVED KNOWLEDGE")
+    print("=" * 60)
 
-    It allows us to SEE what information was given
-    to the LLM.
-
-    Later, we could hide this from the normal user.
-    """
-
-    print(
-        "\n================ RETRIEVED CHUNKS ================"
-    )
-
-    for index, result in enumerate(results):
+    if not results:
 
         print(
-            f"\n--- Result {index + 1} ---"
+            "No sufficiently relevant knowledge found."
         )
 
+        return
+
+    for index, result in enumerate(
+        results,
+        start=1
+    ):
+
+        print()
         print(
-            f"Chunk ID: {result['chunk_id']}"
+            f"CHUNK {index}"
         )
 
         print(
             f"Similarity: {result['score']:.4f}"
         )
 
+        print("-" * 60)
+
         print(
-            f"\n{result['text']}"
+            result["text"]
         )
 
-    print(
-        "\n==================================================="
-    )
-
 
 # ============================================================
-# STEP 14 - BUILD RAG PROMPT
+# STEP 16 - CREATE RAG PROMPT
 # ============================================================
 
-def build_rag_prompt(
+def create_rag_prompt(
     question,
-    retrieved_chunks
+    results
 ):
     """
-    Build the prompt that will be sent to Gemma.
+    Create the final prompt sent to the LLM.
 
-    Important:
-
-    We are NOT asking the model to answer only from
-    its general knowledge.
-
-    We explicitly provide the retrieved context.
-
-    This is the "Augmented" part of:
-
-        Retrieval-Augmented Generation
+    The LLM is instructed to answer using the retrieved
+    knowledge instead of inventing information.
     """
 
-    # Combine all retrieved chunks.
-    context_parts = []
+    if not results:
 
-    for index, result in enumerate(
-        retrieved_chunks
-    ):
+        context = "No relevant knowledge was found."
 
-        context_parts.append(
+    else:
 
-            f"""
-SOURCE {index + 1}
+        context_parts = []
 
-{result['text']}
+        for index, result in enumerate(
+            results,
+            start=1
+        ):
+
+            context_parts.append(
+                f"""
+--- Knowledge Chunk {index} ---
+{result["text"]}
 """
+            )
 
+        context = "\n".join(
+            context_parts
         )
 
-    # Combine all sources into one context string.
-    context = "\n".join(
-        context_parts
-    )
-
-    # Build the final prompt.
     prompt = f"""
-You are a helpful RAG knowledge assistant.
+You are a helpful AI assistant.
 
-Your job is to answer the user's question using
-the provided knowledge base context.
+Answer the user's question using the provided knowledge.
 
 IMPORTANT RULES:
 
-1. Use the provided context as the primary source.
-2. Do not invent information that is not supported
-   by the context.
-3. If the context does not contain enough information,
-   clearly say that the information was not found
-   in the knowledge base.
-4. Explain the answer in simple English.
-5. You may combine information from multiple sources
-   if they are relevant.
+1. Use the provided knowledge as the primary source.
+2. Do not invent facts that are not supported by the knowledge.
+3. If the knowledge does not contain enough information,
+   clearly say that the knowledge base does not contain
+   enough information to answer.
+4. Give a simple and clear answer.
+5. Do not mention internal RAG processing unless necessary.
 
-================ KNOWLEDGE BASE CONTEXT ================
+KNOWLEDGE:
 
 {context}
-
-================ END CONTEXT ============================
 
 USER QUESTION:
 
 {question}
 
-==========================================================
-
-Answer the user's question based on the knowledge base.
+ANSWER:
 """
 
     return prompt
 
 
 # ============================================================
-# STEP 15 - ASK OLLAMA TO GENERATE THE ANSWER
+# STEP 17 - CALL OLLAMA CLOUD
 # ============================================================
 
-def generate_answer(prompt):
+def ask_ollama(prompt):
     """
-    Send our RAG prompt to the Ollama Cloud LLM.
-
-    The LLM receives:
-
-        System instructions
-        +
-        Retrieved document context
-        +
-        User question
-
-    It then generates the final answer.
+    Send the RAG prompt to Ollama Cloud.
     """
 
     url = f"{OLLAMA_BASE_URL}/chat"
 
-    payload = {
+    headers = {
+        "Authorization": f"Bearer {OLLAMA_API_KEY}",
+        "Content-Type": "application/json"
+    }
 
+    payload = {
         "model": MODEL_NAME,
 
         "messages": [
-
             {
                 "role": "user",
-
                 "content": prompt
             }
-
         ],
 
         "stream": False
-
     }
 
-    try:
-
-        response = requests.post(
-
-            url,
-
-            headers=HEADERS,
-
-            json=payload,
-
-            timeout=120
-
-        )
-
-        response.raise_for_status()
-
-        data = response.json()
-
-        # Extract the generated answer.
-        answer = data["message"]["content"]
-
-        return answer
-
-    except requests.exceptions.RequestException as error:
-
-        print(
-            "\nLLM API error:"
-        )
-
-        print(error)
-
-        try:
-
-            print(
-                response.text
-            )
-
-        except:
-
-            pass
-
-        return None
-
-
-# ============================================================
-# STEP 16 - PROCESS ONE USER QUESTION
-# ============================================================
-
-def ask_question(
-    question,
-    vector_store
-):
-    """
-    Complete RAG pipeline for one question.
-
-    This function connects everything together:
-
-        Question
-           ↓
-        Embedding
-           ↓
-        Retrieval
-           ↓
-        Context
-           ↓
-        Prompt
-           ↓
-        LLM
-           ↓
-        Answer
-    """
-
-    # --------------------------------------------------------
-    # RETRIEVAL
-    # --------------------------------------------------------
-
-    results = search_vector_store(
-        question,
-        vector_store,
-        top_k=5
+    response = requests.post(
+        url,
+        headers=headers,
+        json=payload,
+        timeout=120
     )
 
-    # Show what the retriever found.
+    response.raise_for_status()
+
+    data = response.json()
+
+    return data["message"]["content"]
+
+
+# ============================================================
+# STEP 18 - ASK A QUESTION
+# ============================================================
+
+def answer_question(
+    question,
+    chunks,
+    embeddings
+):
+
+    # --------------------------------------------
+    # Retrieve relevant knowledge
+    # --------------------------------------------
+
+    results = search_knowledge(
+        question,
+        chunks,
+        embeddings
+    )
+
+    # --------------------------------------------
+    # Show retrieved chunks
+    # --------------------------------------------
+
     display_retrieved_chunks(
         results
     )
 
-    # --------------------------------------------------------
-    # PROMPT CONSTRUCTION
-    # --------------------------------------------------------
+    # --------------------------------------------
+    # Create RAG prompt
+    # --------------------------------------------
 
-    prompt = build_rag_prompt(
+    prompt = create_rag_prompt(
         question,
         results
     )
 
-    # --------------------------------------------------------
-    # GENERATION
-    # --------------------------------------------------------
+    # --------------------------------------------
+    # Send prompt to Ollama
+    # --------------------------------------------
 
-    print(
-        "\nGenerating answer..."
-    )
+    print()
+    print("=" * 60)
+    print("GENERATING ANSWER")
+    print("=" * 60)
+    print()
 
-    answer = generate_answer(
+    answer = ask_ollama(
         prompt
     )
 
-    # --------------------------------------------------------
-    # DISPLAY FINAL ANSWER
-    # --------------------------------------------------------
-
-    print(
-        "\n================ ANSWER ================="
-    )
-
-    if answer:
-
-        print(answer)
-
-    else:
-
-        print(
-            "Unable to generate an answer."
-        )
-
-    print(
-        "========================================="
-    )
+    return answer
 
 
 # ============================================================
-# STEP 17 - MAIN PROGRAM
+# STEP 19 - MAIN PROGRAM
 # ============================================================
 
 def main():
 
+    # --------------------------------------------
+    # Prepare vector database
+    # --------------------------------------------
+
+    chunks, embeddings = prepare_vector_store()
+
+    print()
+    print("=" * 60)
+    print("V9 RAG SYSTEM READY")
+    print("=" * 60)
+
+    print()
     print(
-        "\n================================================"
-    )
-
-    print(
-        "       V9 - RAG KNOWLEDGE SYSTEM"
-    )
-
-    print(
-        "================================================"
-    )
-
-    print(
-        f"\nLLM Model: {MODEL_NAME}"
-    )
-
-    print(
-        f"Embedding Model: {EMBEDDING_MODEL}"
-    )
-
-    print(
-        f"Knowledge Base: {DOCUMENT_PATH}"
-    )
-
-    # --------------------------------------------------------
-    # LOAD DOCUMENT
-    # --------------------------------------------------------
-
-    document = load_document()
-
-    # --------------------------------------------------------
-    # CREATE OR LOAD VECTOR STORE
-    # --------------------------------------------------------
-
-    if os.path.exists(
-        VECTOR_STORE_PATH
-    ):
-
-        # Vector store already exists.
-        #
-        # This means we don't need to recreate
-        # all embeddings.
-        vector_store = load_vector_store()
-
-    else:
-
-        # First run.
-        #
-        # We need to:
-        #
-        # 1. Split document
-        # 2. Create embeddings
-        # 3. Save vector store
-
-        chunks = create_chunks(
-            document,
-            chunk_size=500,
-            overlap=100
-        )
-
-        vector_store = build_vector_store(
-            chunks
-        )
-
-    # --------------------------------------------------------
-    # START INTERACTIVE CHAT
-    # --------------------------------------------------------
-
-    print(
-        "\nRAG system is ready!"
-    )
-
-    print(
-        "\nAsk questions about the knowledge base."
+        "Type your question."
     )
 
     print(
         "Type 'exit' to stop."
     )
 
-    # Infinite loop for questions.
+    # --------------------------------------------
+    # Interactive question loop
+    # --------------------------------------------
+
     while True:
 
         try:
@@ -989,38 +714,53 @@ def main():
             EOFError
         ):
 
+            print()
+            print("Exiting...")
+            break
+
+        if question.lower() == "exit":
+
             print(
-                "\nGoodbye!"
+                "Goodbye!"
             )
 
             break
 
-        # Ignore empty questions.
         if not question:
 
             continue
 
-        # Exit command.
-        if question.lower() in [
-            "exit",
-            "quit"
-        ]:
+        try:
 
-            print(
-                "\nGoodbye!"
+            answer = answer_question(
+                question,
+                chunks,
+                embeddings
             )
 
-            break
+            print()
+            print("=" * 60)
+            print("FINAL ANSWER")
+            print("=" * 60)
 
-        # Process the question through RAG.
-        ask_question(
-            question,
-            vector_store
-        )
+            print()
+            print(answer)
+
+        except requests.exceptions.RequestException as error:
+
+            print()
+            print("Ollama API error:")
+            print(error)
+
+        except Exception as error:
+
+            print()
+            print("ERROR:")
+            print(error)
 
 
 # ============================================================
-# STEP 18 - START PROGRAM
+# START PROGRAM
 # ============================================================
 
 if __name__ == "__main__":
