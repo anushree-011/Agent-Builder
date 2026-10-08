@@ -2,329 +2,228 @@
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=32&pause=1000&color=7C3AED&center=true&vCenter=true&width=1000&lines=Watch+AI+Agents+Evolve;From+Chat+to+Autonomous+Systems;12+Visual+Journeys" alt="Agent-Builder" />
+<img src="assets/agent-evolution.svg" alt="Agent-Builder visual evolution" width="1200" />
 
 <p>
   <img src="https://img.shields.io/badge/Python-3.8%2B-3670A0?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/Ollama-API-8B5CF6?style=for-the-badge" alt="Ollama" />
-  <img src="https://img.shields.io/badge/Versions-12-FF6B6B?style=for-the-badge" alt="12 versions" />
+  <img src="https://img.shields.io/badge/Agentic-AI-22C55E?style=for-the-badge" alt="Agentic AI" />
+  <img src="https://img.shields.io/badge/12-versions-FF6B6B?style=for-the-badge" alt="12 versions" />
   <img src="https://img.shields.io/badge/License-MIT-FFD166?style=for-the-badge" alt="MIT" />
 </p>
 
 </div>
 
----
+> From a simple chatbot to a multi-agent workflow system.
 
-## 🚀 THE 12 VERSIONS AT A GLANCE
+<br>
 
-See each agent's superpower instantly:
+## 🚀 What this repo is
 
-### V1: 💬 CHAT AGENT
-```
-    🤖
-   /|\
-   / \
-    ↕️
-   😊
-   
-Agent listens and talks
-```
+Agent-Builder is a hands-on learning path for building AI agents from scratch.
 
-### V2: 📖 FILE READER
-```
-   🤖 ──→ 📄 ──→ 👁️
-   
-Agent reads files from disk
-```
+Instead of jumping straight into a giant framework, this repo teaches the real progression:
 
-### V3: 🖊️ FILE WRITER
-```
-   🤖 ──→ 💾 ──→ 📄✨
-   
-Agent creates new files
-```
-
-### V4: 🎯 PLANNER
-```
-   🤖 📋 ✓ ✓ ✓ 🎬
-   
-Agent breaks tasks into steps
+```text
+Chatbot
+   ↓
+Can use tools
+   ↓
+Can read and write files
+   ↓
+Can plan actions
+   ↓
+Can remember context
+   ↓
+Can act safely
+   ↓
+Can reflect and validate
+   ↓
+Can use knowledge retrieval
+   ↓
+Can route work to specialists
+   ↓
+Can coordinate multiple agents
+   ↓
+Can automate full workflows
 ```
 
-### V5: 🔧 TOOL REGISTRY
-```
-   🤖 ──→ [🔨] [🔍] [📝] [⚡]
-          
-Clean tools, organized system
-```
-
-### V6: 💾 MEMORY
-```
-   🤖 ⇄ 🧠 (SQLite)
-   
-Agent remembers conversations
-```
-
-### V7: 🛡️ SAFETY
-```
-   🤖 ──→ ⚠️ ──→ ✅ APPROVE? ──→ 🔨
-   
-Agent asks before risky actions
-```
-
-### V8: 🤔 REFLECTION
-```
-   🤖 → 🔨 → 👁️ "Did it work?" → ✓/🔄
-   
-Agent checks & fixes mistakes
-```
-
-### V9: 📚 RAG KNOWLEDGE
-```
-   🤖 ──→ 🔍 [📚📖📝] ──→ 💡 ANSWER
-   
-Agent retrieves from documents
-```
-
-### V10: 🔀 ROUTER
-```
-   🤖 ──→ 🚦 ──→ 🎯 SPECIALIST A
-             └──→ 🎯 SPECIALIST B
-             └──→ 🎯 SPECIALIST C
-   
-Agent sends tasks to experts
-```
-
-### V11: 🎭 MULTI-AGENT
-```
-   🤖 COORDINATOR
-    ├─→ 🤖 FILE AGENT
-    ├─→ 🤖 MEMORY AGENT
-    └─→ 🤖 KNOWLEDGE AGENT
-   
-Agents collaborate together
-```
-
-### V12: ⚙️ WORKFLOW
-```
-   🤖 ──→ [ STEP 1 ] ──→ [ STEP 2 ] ──→ [ STEP 3 ] ──→ ✅
-   
-Agent automates full processes
-```
+Each version adds one important idea, one real capability, and one step toward agentic AI.
 
 ---
 
-## 🎬 WATCH THE EVOLUTION
+## 🧭 The 12 versions
 
-```
-START                                                    MASTER
-  |                                                       |
-  V1 Chat                                                 V12 Workflow
-  🟢 ➜ 🟡 ➜ 🟠 ➜ 🔴 ➜ 🟣 ➜ 🔵 ➜ ⚫ ➜ 🟤 ➜ 🟪 ➜ 🟥 ➜ 🟦 ➜ 🟩
-  
-  [Simple] ──────────────────────── [Autonomous System]
-```
-
----
-
-## 🎯 PICK YOUR ADVENTURE
-
-### 👶 **NEW TO AI?**
-```
-Start here ↓
-
-V1 (Chat) → V2 (Read) → V3 (Write) → V4 (Plan)
-
-= Learn the fundamentals
-```
-
-### 🚀 **WANT PRODUCTION SYSTEMS?**
-```
-Go here ↓
-
-V5 (Tools) → V6 (Memory) → V7 (Safety) → V11 (Multi-Agent)
-
-= Build enterprise-grade agents
-```
-
-### 🧠 **WANT EVERYTHING?**
-```
-Master path ↓
-
-V1 → V2 → V3 → V4 → V5 → V6 → V7 → V8 → V9 → V10 → V11 → V12
-
-= Complete agentic AI education
-```
+| Version | What it does | Main idea |
+|---------|--------------|-----------|
+| V1 | Chat agent | Basic conversation |
+| V2 | File reading agent | Tool use + file access |
+| V3 | File creation agent | Real-world actions |
+| V4 | Planning agent | Break work into steps |
+| V5 | Tool registry | Reusable tool system |
+| V6 | Memory agent | Persistence and recall |
+| V7 | Safety agent | Approval and guardrails |
+| V8 | Reflection agent | Check results and retry |
+| V9 | RAG agent | Knowledge retrieval |
+| V10 | Routing agent | Send tasks to specialists |
+| V11 | Multi-agent system | Coordination between agents |
+| V12 | Workflow automation | End-to-end agent orchestration |
 
 ---
 
-## 🗂️ FOLDER STRUCTURE
+## 🧠 The core pattern
 
+```text
+User request
+   ↓
+Agent decides what to do
+   ↓
+Agent calls a tool or action
+   ↓
+Agent observes the result
+   ↓
+Agent responds with better context
 ```
+
+That loop is the heart of agentic AI.
+
+---
+
+## 🛠️ Why this repo is useful
+
+If you're learning AI agents, this repo makes the architecture easy to see:
+
+- how tools are exposed to an LLM
+- how agent loops work in practice
+- how planning improves reliability
+- how memory adds continuity
+- how safety prevents dangerous actions
+- how reflection improves quality
+- how routing and multi-agent systems scale
+
+This is not theory-only code. It is a practical roadmap.
+
+---
+
+## 📁 Repository structure
+
+```text
 Agent-Builder/
-│
-├─ v01_chat_agent/              💬
-├─ v02_file_reading_agent/      📖
-├─ v03_file_creation_agent/     🖊️
-├─ v04_planning_agent/          🎯
-├─ v05_reusable_tool_system/    🔧
-├─ v06_memory/                  💾
-├─ v07_safety_and_human_approval/  🛡️
-├─ v08_reflection_and_evaluation/  🤔
-├─ v09_rag_knowledge_system/    📚
-├─ v10_agent_routing/           🔀
-├─ v11_multi_agent_system/      🎭
-├─ v12_agentic_workflow_automation/  ⚙️
-│
-└─ requirements.txt
+├── v01_basic_local_agent/
+├── v02_file_reading_agent/
+├── v03_file_creation_agent/
+├── v04_planning_agent/
+├── v05_reusable_tool_system/
+├── v06_memory/
+├── v07_safety_and_human_approval/
+├── v08_reflection_and_evaluation/
+├── v09_rag_knowledge_system/
+├── v10_agent_routing/
+├── v11_multi_agent_system/
+├── v12_agentic_workflow_automation/
+├── assets/
+├── .env.example
+├── requirements.txt
+├── LICENSE
+├── README.md
+└── docs/
 ```
 
 ---
 
-## ⚡ QUICK START
+## ⚡ Quick start
+
+### 1. Clone the repo
 
 ```bash
-# 1. Clone
 git clone https://github.com/anushree-011/Agent-Builder.git
 cd Agent-Builder
+```
 
-# 2. Install
-pip install -r requirements.txt
+### 2. Set up environment
 
-# 3. Setup env
+```bash
 cp .env.example .env
-# Edit .env with your OLLAMA credentials
+```
 
-# 4. Run (start simple)
-cd v01_chat_agent
-python chat_agent.py
+Then update your `.env` file with your Ollama settings.
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run a version
+
+```bash
+cd v01_basic_local_agent
+python basic_agent.py
+```
+
+Or try a more advanced version:
+
+```bash
+cd v11_multi_agent_system
+python main.py
 ```
 
 ---
 
-## 🎓 WHAT YOU'LL LEARN
+## 🎯 What you will learn
 
-| Version | What It Does | Time |
-|---------|-------------|------|
-| **V1** 💬 | Respond to text | 10 min |
-| **V2** 📖 | Read files | 15 min |
-| **V3** 🖊️ | Write files | 15 min |
-| **V4** 🎯 | Plan tasks | 20 min |
-| **V5** 🔧 | Organize tools | 20 min |
-| **V6** 💾 | Add memory | 20 min |
-| **V7** 🛡️ | Add safety | 20 min |
-| **V8** 🤔 | Self-check | 25 min |
-| **V9** 📚 | Search documents | 25 min |
-| **V10** 🔀 | Route tasks | 25 min |
-| **V11** 🎭 | Multiple agents | 30 min |
-| **V12** ⚙️ | Full workflows | 30 min |
+By the end, you will understand:
+
+- how a basic LLM agent works
+- how tools change an AI from passive to active
+- how planning improves execution
+- how memory creates continuity
+- how safety systems make agents responsible
+- how agents can reflect and improve
+- how RAG extends knowledge beyond a prompt
+- how routers and multi-agent systems scale coordination
 
 ---
 
-## 🔄 HOW AGENTS WORK (THE PATTERN)
+## 🌱 Learning journey
 
-```
-Every version uses the same loop:
-
-        👤 USER
-         ↓
-    🤖 "What should I do?"
-         ↓
-    🔨 Execute tool/action
-         ↓
-    👁️ Check result
-         ↓
-    💬 Respond to user
-         ↓
-    💾 Learn (optional)
+```text
+Start simple
+   → add tools
+   → add planning
+   → add memory
+   → add safety
+   → add reflection
+   → add knowledge
+   → add routing
+   → add collaboration
+   → automate workflows
 ```
 
-**Versions V1→V12 just add MORE tools and smarter thinking.**
+This is the real progression from a chatbot to an autonomous system.
 
 ---
 
-## 🎪 THE TRANSFORMATION
+## 🏁 Final takeaway
 
-### BEFORE (V1)
-```
-User: "What's 2+2?"
-Agent: "4"
-Status: 🟡 Limited (can only talk)
-```
+Agent-Builder is not just a collection of scripts.
 
-### AFTER (V12)
-```
-User: "Build me a Python project"
-Agent:
-  ✅ Plans structure
-  ✅ Creates folders & files  
-  ✅ Reads best practices
-  ✅ Routes specialized work
-  ✅ Coordinates team of agents
-  ✅ Checks safety
-  ✅ Validates results
-  ✅ Saves to memory
-Status: 🟢 Autonomous (can think, plan, act, learn)
-```
+It is a visual and practical roadmap for understanding how AI agents evolve from:
 
----
+- answering
+- to reading
+- to acting
+- to planning
+- to remembering
+- to collaborating
+- to automating
 
-## 💡 CORE IDEA
-
-> **Don't try to build a superhuman AI in one day.**
->
-> **Build it by adding one superpower at a time.**
-
-```
-This repo shows you EXACTLY how.
-```
-
----
-
-## 🌟 WHY THIS REPO
-
-✅ **See the evolution** - Each version is complete & runnable  
-✅ **Learn progressively** - Build skills step by step  
-✅ **Visual learning** - See what changes each version  
-✅ **Hands-on** - Run the code, not just read theory  
-✅ **Real patterns** - Uses actual production techniques  
-
----
-
-## 📊 CAPABILITY GROWTH
-
-```
-🚀 Power
-  |
-  |████████████████████████ V12 (Workflow Automation)
-  |███████████████████ V11 (Multi-Agent Collab)
-  |██████████████ V10 (Task Routing)
-  |████████████ V9 (Knowledge Retrieval)
-  |██████████ V8 (Self-Reflection)
-  |████████ V7 (Safety Checks)
-  |██████ V6 (Memory)
-  |████ V5 (Tool Registry)
-  |███ V4 (Planning)
-  |██ V3 (Write)
-  |█ V2 (Read)
-  | V1 (Chat)
-  +─────────────────────────→ Versions
-    1  2  3  4  5  6  7  8  9  10 11 12
-```
+If you are learning agentic AI, this repo is a clear, step-by-step blueprint.
 
 ---
 
 <div align="center">
 
-## 🎯 READY?
-
-Pick a version → Run the code → See it work → Learn → Level up
-
-**Start with V1. Master the journey.**
-
----
-
-Made with ❤️ for AI learners  
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&pause=1000&color=00E5FF&center=true&width=500&lines=Build.+Learn.+Master.;One+Version+at+a+Time." alt="tagline" />
+<p><strong>Build agents step by step.</strong></p>
 
 </div>
