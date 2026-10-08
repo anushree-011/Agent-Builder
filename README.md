@@ -1,753 +1,486 @@
-# 🤖 Agent-Builder: The Evolution of AI Agents
+# 🤖 Agent-Builder
 
 <div align="center">
 
-```
-╔════════════════════════════════════════════════════════════════╗
-║                                                                ║
-║         🚀 From Simple Chat to Multi-Agent Orchestration 🚀    ║
-║                                                                ║
-║      Master Agentic AI through Progressive Implementation     ║
-║                                                                ║
-╚════════════════════════════════════════════════════════════════╝
-```
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=28&pause=1000&color=7C3AED&center=true&vCenter=true&width=1000&lines=Agentic+AI+Builder;From+Chatbot+to+Multi-Agent+System;V1+to+V12+Evolution;Build+Agents+with+Tools;Think%2C+Plan%2C+Act%2C+Remember" alt="Animated Agent-Builder banner" />
 
-[![Python](https://img.shields.io/badge/Python-3.8+-3670A0?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![Ollama](https://img.shields.io/badge/Ollama-API-8B5CF6?style=for-the-badge&logo=data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%20fill=%22white%22%3E%3Ccircle%20cx=%2712%27%20cy=%2712%27%20r=%2710%27/%3E%3C/svg%3E)](https://ollama.com)
-[![MIT License](https://img.shields.io/badge/License-MIT-FFD166?style=for-the-badge)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Production--Ready-22C55E?style=for-the-badge)](#)
-[![Versions](https://img.shields.io/badge/Versions-12%2B-FF6B6B?style=for-the-badge)](#-the-12-version-evolution)
+<p>
+  <img src="https://img.shields.io/badge/Python-3.8%2B-3670A0?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Ollama-API-8B5CF6?style=for-the-badge" alt="Ollama" />
+  <img src="https://img.shields.io/badge/Agentic-AI-22C55E?style=for-the-badge" alt="Agentic AI" />
+  <img src="https://img.shields.io/badge/Versions-12-FF6B6B?style=for-the-badge" alt="12 versions" />
+  <img src="https://img.shields.io/badge/License-MIT-FFD166?style=for-the-badge" alt="MIT" />
+</p>
 
 </div>
 
----
-
-## 🎬 Watch The Agent Evolution
-
-<div align="center">
-
-### 📺 THE AGENT BUILDER JOURNEY
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                                                                 │
-│   ⏱️  PHASE 1: FOUNDATIONS (V1-V5)                              │
-│   ════════════════════════════════════════                      │
-│                                                                 │
-│        V1         V2          V3           V4          V5      │
-│        ▼          ▼           ▼            ▼           ▼       │
-│      ┌───┐     ┌──────┐    ┌───────┐   ┌────────┐  ┌──────┐  │
-│      │💬 │     │📂 R  │    │📝 W   │   │📋 PLAN │  │🔧 REG│  │
-│      │   │     │      │    │       │   │        │  │      │  │
-│      │ A │────▶│ B    │───▶│ C     │──▶│ D      │─▶│ E    │  │
-│      │   │     │      │    │       │   │        │  │      │  │
-│      └───┘     └──────┘    └───────┘   └────────┘  └──────┘  │
-│       ▲         ▲           ▲            ▲           ▲        │
-│     CHAT      TOOLS      ACTIONS       PLANNING    REGISTRY   │
-│     ONLY      READING     DOING        EXECUTION   SYSTEM     │
-│                                                                 │
-│    🎯 Learn: LLM → Tools → Actions → Planning → Modularity   │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-
-         ⏱️  PHASE 2: INTELLIGENCE (V6-V9)
-         ══════════════════════════════════
-
-              V6          V7           V8           V9
-              ▼           ▼            ▼            ▼
-            ┌──────┐  ┌────────┐  ┌─────────┐  ┌─────────┐
-            │💾 MEM│  │🔒 SAFE │  │🎯 EVAL  │  │📚 RAG   │
-            │      │  │        │  │         │  │         │
-            │ F ───┼─▶│ G      │─▶│ H       │─▶│ I       │
-            │      │  │        │  │         │  │         │
-            └──────┘  └────────┘  └─────────┘  └─────────┘
-              ▲         ▲           ▲            ▲
-           MEMORY    SAFETY      VALIDATION    KNOWLEDGE
-           STORAGE   APPROVAL     RETRY         RETRIEVE
-                                                            
-        🎯 Learn: Persistence → Safety → Evaluation → Intelligence
-                                                            
-         ⏱️  PHASE 3: ORCHESTRATION (V10-V12)
-         ════════════════════════════════════
-
-              V10         V11            V12
-              ▼           ▼              ▼
-            ┌────────┐ ┌─────────┐  ┌──────────┐
-            │🚦 ROUT │ │👥 COORD │  │🌐 FLOW   │
-            │        │ │         │  │          │
-            │ J ────▶│ K         │─▶│ L        │
-            │        │ │         │  │          │
-            └────────┘ └─────────┘  └──────────┘
-              ▲         ▲              ▲
-            ROUTING   MULTI-AGENT    WORKFLOWS
-            TASKS     SYSTEMS        AUTOMATION
-                                     
-        🎯 Learn: Routing → Orchestration → Automation
-                                                            
-└─────────────────────────────────────────────────────────────────┘
-```
-
-</div>
+> A progressive learning repository for building AI agents from scratch, one capability at a time.
 
 ---
 
-## 🌟 THE COMPLETE EVOLUTION MAP
+## 🚀 The Story: How Agent-Builder Grows
 
-<div align="center">
+This project is not a single agent. It is a structured journey of agent evolution.
 
-### 📊 VERSION PROGRESSION WITH CAPABILITIES
+Each version adds a new idea, a new capability, and a new level of intelligence.
 
-```
-START HERE ⬇️
-
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃                    V1: CHAT AGENT 💬                          ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ What's new: Basic LLM conversation                            ┃
-┃ Key skill: API calling & conversation loops                  ┃
-┃ Concept:   User → LLM → Response                             ┃
-┃ Example:   "What is Python?" → Model answers                 ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ 💾 State:  Conversation history                              ┃
-┃ 🧠 Brain:  Pure LLM (no tools)                                ┃
-┃ 🔧 Tools:  None                                               ┃
-┃ 📊 Lines:  ~150                                               ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-                            ⬇️ UPGRADE
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃               V2: FILE READING AGENT 📂                       ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ What's new: Tool calling introduced!                         ┃
-┃ Key skill: Tool schemas, agentic loops                       ┃
-┃ Concept:   User → LLM [reads] → File content → LLM response  ┃
-┃ Example:   "What's in config.txt?" → Reads file → Answers    ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ 💾 State:  Conversation + file system                         ┃
-┃ 🧠 Brain:  LLM decides: talk or read file?                   ┃
-┃ 🔧 Tools:  list_files(), read_file()                          ┃
-┃ 📊 Lines:  ~400                                               ┃
-┃ ⭐ NEW:     Tool schemas! Agentic loop! Observation!          ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-                            ⬇️ UPGRADE
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃             V3: FILE CREATION AGENT 🆕                        ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ What's new: Agent now MODIFIES the world!                    ┃
-┃ Key skill: State-changing tools                              ┃
-┃ Concept:   User → LLM [creates] → File/folder → Confirmation ┃
-┃ Example:   "Create hello.txt" → Writes file → Confirms       ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ 💾 State:  Conversation + filesystem mutations                ┃
-┃ 🧠 Brain:  LLM: read, write, create, or respond?             ┃
-┃ 🔧 Tools:  + create_folder(), create_file()                   ┃
-┃ 📊 Lines:  ~500                                               ┃
-┃ ⭐ NEW:     State changes! Error handling! Path safety!        ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-                            ⬇️ UPGRADE
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃             V4: PLANNING AGENT 📋                             ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ What's new: Decompose tasks before execution!                ┃
-┃ Key skill: Planning, task decomposition                      ┃
-┃ Concept:   User → [PLAN] → Execute step-by-step → Result    ┃
-┃ Example:   "Create project" → 4-step plan → Execute all     ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ 💾 State:  Conversation + execution plan + progress tracking ┃
-┃ 🧠 Brain:  LLM: plan FIRST, then execute sequentially        ┃
-┃ 🔧 Tools:  Same as V3 + planning                              ┃
-┃ 📊 Lines:  ~750                                               ┃
-┃ ⭐ NEW:     Planning! Sequential execution! Progress tracking!┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-                            ⬇️ UPGRADE
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃         V5: REUSABLE TOOL SYSTEM 🔧                           ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ What's new: Tool Registry pattern (clean architecture!)     ┃
-┃ Key skill: Modular design, dynamic tool registration        ┃
-┃ Concept:   Tools added to registry → LLM sees them → Use    ┃
-┃ Example:   @registry.register("new_tool") → Automatic!      ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ 💾 State:  Tool registry + schemas                            ┃
-┃ 🧠 Brain:  Same agent loop, but tools are dynamic!           ┃
-┃ 🔧 Tools:  All previous tools + NEW tool pattern!             ┃
-┃ 📊 Lines:  ~850 (but much cleaner!)                           ┃
-┃ ⭐ NEW:     Registry! Modularity! Easy to add tools!           ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-                            ⬇️ UPGRADE
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃             V6: MEMORY AGENT 💾                               ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ What's new: Persistent memory! Agent remembers across runs!  ┃
-┃ Key skill: SQLite persistence, memory retrieval              ┃
-┃ Concept:   Remember → Recall → Use in decisions              ┃
-┃ Example:   "Remember I like Python" → Later: "What does... " ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ 💾 State:  Short-term (history) + Long-term (DB)             ┃
-┃ 🧠 Brain:  Short memory (last 10 msgs) + DB search           ┃
-┃ 🔧 Tools:  + save_memory(), search_memory(), delete_memory() ┃
-┃ 📊 Lines:  ~1500                                              ┃
-┃ ⭐ NEW:     Memory! Persistence! Retrieval! Continuous learning!
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-                            ⬇️ UPGRADE
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃       V7: SAFETY & HUMAN APPROVAL 🔒                          ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ What's new: Risk levels! Approval gates!                     ┃
-┃ Key skill: Safety management, human-in-the-loop             ┃
-┃ Concept:   Tool has risk → Check risk → Ask human if needed ┃
-┃ Example:   Delete file → 🔴 HIGH RISK → Ask user first      ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ 💾 State:  + Safety levels per tool                           ┃
-┃ 🧠 Brain:  LLM + Safety manager (separate component!)        ┃
-┃ 🔧 Tools:  Same, but classified: 🟢 safe, 🟡 approval, 🔴 blocked
-┃ 📊 Lines:  ~1700                                              ┃
-┃ ⭐ NEW:     Risk levels! Approval workflow! Safety gates!      ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-                            ⬇️ UPGRADE
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃       V8: REFLECTION & EVALUATION 🎯                          ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ What's new: Agent VALIDATES results! Retries on failure!     ┃
-┃ Key skill: Result validation, retry logic, error recovery    ┃
-┃ Concept:   Action → Validate → Retry if failed → Success    ┃
-┃ Example:   Create file → Check if exists → If not, retry    ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ 💾 State:  + Reflection/evaluation results                    ┃
-┃ 🧠 Brain:  After tool execution: evaluate → retry if needed  ┃
-┃ 🔧 Tools:  Same + evaluation cycle                            ┃
-┃ 📊 Lines:  ~1900                                              ┃
-┃ ⭐ NEW:     Reflection! Evaluation! Retry! Intelligence!       ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-                            ⬇️ UPGRADE
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃     V9: RAG KNOWLEDGE SYSTEM 📚                               ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ What's new: Retrieval-Augmented Generation!                  ┃
-┃ Key skill: Document loading, chunking, semantic search       ┃
-┃ Concept:   Query → Search docs → Retrieve context → Answer  ┃
-┃ Example:   "What's our policy?" → Search KB → Get answer     ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ 💾 State:  + Document index, embeddings                       ┃
-┃ 🧠 Brain:  Query → Search → Retrieve → LLM uses context     ┃
-┃ 🔧 Tools:  + search_knowledge_base(), load_documents()       ┃
-┃ 📊 Lines:  ~2200                                              ┃
-┃ ⭐ NEW:     RAG! Knowledge base! Context augmentation!         ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-                            ⬇️ UPGRADE
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃         V10: AGENT ROUTING 🚦                                 ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ What's new: Router agent! Specialist delegation!             ┃
-┃ Key skill: Task classification, specialist selection         ┃
-┃ Concept:   Task → Router → Select specialist → Execute       ┃
-┃ Example:   File task → FILE_AGENT, Math → CALC_AGENT         ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ 💾 State:  Multiple specialist agents                         ┃
-┃ 🧠 Brain:  Router (task classifier) → Specialist (executor)  ┃
-┃ 🔧 Tools:  Each specialist has own tools                      ┃
-┃ 📊 Lines:  ~2400                                              ┃
-┃ ⭐ NEW:     Routing! Specialists! Task classification!         ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-                            ⬇️ UPGRADE
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃       V11: MULTI-AGENT SYSTEM 👥                              ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ What's new: Coordinator + Multiple Specialists!              ┃
-┃ Key skill: Agent orchestration, shared state                 ┃
-┃ Concept:   Coordinator → Plan → Delegate to agents → Collect ┃
-┃ Example:   Create file + remember → FILE_AGENT + MEMORY_AGENT
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ 💾 State:  Coordinator + Specialists + Shared state           ┃
-┃ 🧠 Brain:  Coordinator (orchestrator) → Multiple specialists ┃
-┃ 🔧 Tools:  File agent, Memory agent, Calculator agent        ┃
-┃ 📊 Lines:  ~2800                                              ┃
-┃ ⭐ NEW:     Orchestration! Parallelization! Shared state!      ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-                            ⬇️ UPGRADE
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃   V12: WORKFLOW AUTOMATION 🌐                                 ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ What's new: Complex workflow orchestration!                  ┃
-┃ Key skill: External APIs, checkpoints, workflow management   ┃
-┃ Concept:   Define workflow → Execute → Checkpoint → Resume   ┃
-┃ Example:   Fetch API → Process → Save → Alert → Archive      ┃
-┃━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┃
-┃ 💾 State:  Workflow state, checkpoints, execution history    ┃
-┃ 🧠 Brain:  Workflow executor (orchestrator)                  ┃
-┃ 🔧 Tools:  External APIs, notifications, storage             ┃
-┃ 📊 Lines:  ~3200+                                             ┃
-┃ ⭐ NEW:     Workflows! External APIs! Enterprise patterns!     ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-
-END → YOU ARE AN EXPERT IN AGENTIC AI! 🏆
+```text
+V1  →  V2  →  V3  →  V4  →  V5  →  V6  →  V7  →  V8  →  V9  →  V10  →  V11  →  V12
+│     │     │     │     │     │     │     │     │      │       │       │
+│     │     │     │     │     │     │     │     │      │       │       │
+Chat  Tools  Action  Plan  Registry  Memory  Safety  Reflection  RAG  Routing  Multi-Agent  Workflow
 ```
 
-</div>
+The growth pattern is simple:
+
+```text
+Simple response
+   ↓
+Can use tools
+   ↓
+Can act on the real world
+   ↓
+Can plan before acting
+   ↓
+Can remember and improve
+   ↓
+Can reason about safety and failure
+   ↓
+Can retrieve knowledge
+   ↓
+Can delegate tasks to specialists
+   ↓
+Can coordinate multiple agents
+   ↓
+Can automate full workflows
+```
 
 ---
 
-## 🎯 Quick Comparison Table
+## 🎯 What this repo teaches
 
-| Version | Primary Focus | Agent Type | Tools | Complexity | What It Adds |
-|---------|---|---|---|---|---|
-| **V1** | Chat | Single | None | ⭐ | LLM calling |
-| **V2** | Reading | Single | Read | ⭐⭐ | Tool schemas |
-| **V3** | Writing | Single | Read/Write | ⭐⭐ | State changes |
-| **V4** | Planning | Single | Read/Write | ⭐⭐⭐ | Task decomposition |
-| **V5** | Registry | Single | Dynamic | ⭐⭐⭐ | Modularity |
-| **V6** | Memory | Single | +Memory | ⭐⭐⭐ | Persistence |
-| **V7** | Safety | Single | +Safety | ⭐⭐⭐ | Risk management |
-| **V8** | Reflection | Single | +Validation | ⭐⭐⭐⭐ | Intelligence |
-| **V9** | Knowledge | Single | +RAG | ⭐⭐⭐⭐ | Context awareness |
-| **V10** | Routing | Router | Multiple | ⭐⭐⭐⭐ | Task classification |
-| **V11** | Orchestration | Coordinator | Multiple | ⭐⭐⭐⭐⭐ | Multi-agent systems |
-| **V12** | Workflows | Orchestrator | External | ⭐⭐⭐⭐⭐ | Enterprise automation |
+Agent-Builder is a hands-on lab for learning how real agentic systems are built.
+
+It shows the core pattern behind AI agents:
+
+```text
+User request
+   ↓
+LLM decides what to do
+   ↓
+Tool or action is executed
+   ↓
+Result is observed
+   ↓
+Model responds again with better context
+```
+
+This repository demonstrates the most important ideas in agent design:
+
+- Tool calling
+- File and folder operations
+- Planning before execution
+- Reusable tool registries
+- Memory and persistence
+- Safety and approvals
+- Reflection and validation
+- Retrieval-Augmented Generation
+- Routing based on task type
+- Multi-agent coordination
+- Workflow automation
 
 ---
 
-## 🔥 The Capability Explosion
+## 🧭 The 12-Version Evolution
 
-<div align="center">
+Each version solves one core problem and adds one major improvement.
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│             AGENT CAPABILITY GROWTH                         │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  V1:  Chat                        [█░░░░░░░░░░░░░░░░░░]   │
-│  V2:  Chat + Tools                [██░░░░░░░░░░░░░░░░░]   │
-│  V3:  Chat + Tools + State         [███░░░░░░░░░░░░░░░░]   │
-│  V4:  + Planning                   [████░░░░░░░░░░░░░░░]   │
-│  V5:  + Registry                   [█████░░░░░░░░░░░░░░]   │
-│  V6:  + Memory                     [██████░░░░░░░░░░░░░]   │
-│  V7:  + Safety                     [███████░░░░░░░░░░░░]   │
-│  V8:  + Reflection                 [████████░░░░░░░░░░░]   │
-│  V9:  + Knowledge                  [█████████░░░░░░░░░░]   │
-│  V10: + Routing                    [██████████░░░░░░░░░]   │
-│  V11: + Multi-Agent                [███████████░░░░░░░░]   │
-│  V12: + Workflows                  [████████████████████]   │
-│                                                             │
-│  Capabilities: 3x  Memory: 20x  Processing: 100x+           │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
+### V1 — Chat Agent
+
+```text
+Goal: Let the model talk.
+
+What changed:
+- Basic LLM interaction
+- Prompt + response loop
+
+Why it matters:
+This is the foundation. Before tools, memory, or planning, the agent must know how to respond.
 ```
 
-</div>
+### V2 — File Reading Agent
+
+```text
+Goal: Let the agent read from the real world.
+
+What changed:
+- Added tool calling
+- Added file listing and file reading
+- Added agentic loop: decide → act → observe → respond
+
+Why it matters:
+The model is no longer limited to static replies. It can inspect files and act on real content.
+```
+
+### V3 — File Creation Agent
+
+```text
+Goal: Let the agent create files and folders.
+
+What changed:
+- Added write actions
+- Added path management
+- Added file creation tools
+
+Why it matters:
+Now the agent can produce state changes. It is not just answering — it is creating things.
+```
+
+### V4 — Planning Agent
+
+```text
+Goal: Make the agent think before acting.
+
+What changed:
+- Added planning step
+- Break task into smaller steps
+- Execute sequentially
+
+Why it matters:
+This is where agent behavior becomes more reliable. Instead of jumping directly into actions, it creates a plan.
+```
+
+### V5 — Reusable Tool System
+
+```text
+Goal: Build a cleaner, scalable tool architecture.
+
+What changed:
+- Added a tool registry
+- Tools are registered once and reused
+- Agent loop becomes cleaner and more modular
+
+Why it matters:
+This is a major architecture improvement. Instead of hardcoded action logic, tools become reusable building blocks.
+```
+
+### V6 — Memory Agent
+
+```text
+Goal: Let the agent remember.
+
+What changed:
+- Added short-term memory
+- Added persistent memory via SQLite
+- Added save/search memory behavior
+
+Why it matters:
+The agent can now carry context across sessions and reuse facts later.
+```
+
+### V7 — Safety & Human Approval
+
+```text
+Goal: Keep agent actions safe.
+
+What changed:
+- Added risk classification
+- Added approval-required flows
+- Added safety checks before sensitive tools run
+
+Why it matters:
+This is the step that makes agent systems more responsible. The model must not execute risky actions blindly.
+```
+
+### V8 — Reflection & Evaluation
+
+```text
+Goal: Let the agent check whether it succeeded.
+
+What changed:
+- Added reflection loop
+- Added evaluation of result quality
+- Added retry logic for failed actions
+
+Why it matters:
+The agent becomes less fragile. It learns to verify what happened after an action and fix mistakes when needed.
+```
+
+### V9 — RAG Knowledge System
+
+```text
+Goal: Let the agent retrieve information from knowledge sources.
+
+What changed:
+- Document loading
+- Knowledge retrieval
+- Context-aware answers from past information
+
+Why it matters:
+This introduces memory beyond conversation — access to documents, policy data, and facts from external knowledge.
+```
+
+### V10 — Agent Routing
+
+```text
+Goal: Decide which specialist should handle the task.
+
+What changed:
+- Added router agent
+- Task classification
+- Delegation to specialist agents
+
+Why it matters:
+Instead of one large agent trying to do everything, the system routes tasks to the best specialized handler.
+```
+
+### V11 — Multi-Agent System
+
+```text
+Goal: Use multiple agents working together.
+
+What changed:
+- Added coordinator agent
+- Shared state across agents
+- Specialized agents collaborate
+
+Why it matters:
+This mirrors real-world systems: different agents handle different skills, while a coordinator orchestrates them.
+```
+
+### V12 — Workflow Automation
+
+```text
+Goal: Turn agent behavior into business-like workflows.
+
+What changed:
+- Added workflow execution patterns
+- External service orchestration
+- Checkpoints and longer-running flows
+
+Why it matters:
+This is the move from “single agent response” to “agent-driven automation system.”
+```
 
 ---
 
-## 🚀 Architecture Evolution Animation
+## 🧱 The architecture evolution
 
-<div align="center">
-
-```
-🔄 HOW THE AGENT LOOP EVOLVES
-
-V1-V2: Simple Loop
-┌──────────┐
-│  User    │
-└────┬─────┘
-     │
-     ▼
-┌──────────────────┐
-│  LLM             │
-│  (decide action) │
-└────┬─────────────┘
-     │
-     ├─→ Output response
-     │
-     └─→ Call tool? [V2+]
-
-
-V3-V5: Enhanced Loop
-┌──────────┐
-│  User    │
-└────┬─────┘
-     │
-     ▼
-┌──────────────────┐
-│  LLM             │
-│  (plan & decide) │
-└────┬───��─────────┘
-     │
-     ├─→ Respond
-     │
-     ├─→ Call tool
-     │   └─→ Execute
-     │       └─→ Observe
-     │           └─→ [LOOP BACK]
-     │
-     └─→ Return final answer
-
-
-V6-V9: Intelligent Loop
-┌──────────┐
-│  User    │
-└────┬─────┘
-     │
-     ▼
-┌─────────────────────────┐
-│  Search Memory/Knowledge│
-└────┬────────────────────┘
-     │
-     ▼
-┌──────────────────┐
-│  LLM             │
-│  (with context)  │
-└────┬─────────────┘
-     │
-     ├─→ Respond
-     │
-     ├─→ [SAFETY CHECK] 🔒
-     │   └─→ Needs approval?
-     │       └─→ Ask user
-     │
-     ├─→ Call tool
-     │   └─→ Execute
-     │       └─→ Observe
-     │           ▼
-     │       [EVALUATE] 🎯
-     │           └─→ Success?
-     │               ├─→ YES: Continue
-     │               └─→ NO: Retry/Fix
-     │           └─→ [LOOP BACK]
-     │
-     ├─→ Save to memory 💾
-     │
-     └─→ Return final answer
-
-
-V10-V12: Multi-Agent Loop
-┌──────────┐
-│  User    │
-└────┬─────┘
-     │
-     ▼
-┌────────────────────────────┐
-│  COORDINATOR AGENT         │
-│  (understand + plan)       │
-└────┬───────────────────────┘
-     │
-     ▼
-┌────────────────────────────┐
-│  ROUTE TO SPECIALISTS      │
-│  (classify task)           │
-└────┬────────────────────────┘
-     │
-     ├─→ FILE_AGENT
-     │   └─→ (file operations)
-     │
-     ├─→ MEMORY_AGENT
-     │   └─→ (memory ops)
-     │
-     └─→ CALCULATOR_AGENT
-         └─→ (calculations)
-     │
-     ▼
-┌────────────────────────────┐
-│  COLLECT RESULTS           │
-│  (shared state)            │
-└────┬───────────────────────┘
-     │
-     ▼
-┌────────────────────────────┐
-│  SUMMARIZE & RESPOND       │
-└────────────────────────────┘
+```mermaid
+flowchart LR
+    A[V1: Chat] --> B[V2: Read Tools]
+    B --> C[V3: Write Tools]
+    C --> D[V4: Planning]
+    D --> E[V5: Tool Registry]
+    E --> F[V6: Memory]
+    F --> G[V7: Safety]
+    G --> H[V8: Reflection]
+    H --> I[V9: RAG]
+    I --> J[V10: Routing]
+    J --> K[V11: Multi-Agent]
+    K --> L[V12: Workflow Automation]
 ```
 
-</div>
+This is the actual story of the repository:
+
+- V1 teaches the basic model loop.
+- V2 adds file access.
+- V3 adds real-world action.
+- V4 adds planning.
+- V5 adds structure and maintainability.
+- V6 adds persistence.
+- V7 adds safety.
+- V8 adds self-checking.
+- V9 adds external knowledge.
+- V10 adds delegation.
+- V11 adds teamwork.
+- V12 adds system-level automation.
 
 ---
 
-## 💾 Memory & State Growth
+## 🔥 Capability growth over time
 
-<div align="center">
-
-```
-STATE MANAGEMENT EVOLUTION
-
-V1: Minimal State
-┌────────────────────┐
-│ Conversation List  │
-│ - User msgs        │
-│ - Assistant msgs   │
-└────────────────────┘
-  ~100 bytes per turn
-
-
-V2-V5: Growing State
-┌────────────────────┐
-│ Conversation List  │
-│ File System (R/W)  │
-│ Execution History  │
-│ Plan Tracking      │
-└────────────────────┘
-  ~1 KB per turn
-
-
-V6+: Rich State
-┌────────────────────┐
-│ Conversation List  │
-│ File System (R/W)  │
-│ Memory Database    │
-│ Execution History  │
-│ Evaluation Results │
-│ Knowledge Index    │
-│ Safety Log         │
-└────────────────────┘
-  ~10 KB per turn
-
-
-V11-V12: Distributed State
-┌─────────────────────────┐
-│ Global State            │
-├─────────────────────────┤
-│ ┌─────────────────────┐ │
-│ │ Coordinator State   │ │
-│ └─────────────────────┘ │
-│                         │
-│ ┌─────────────────────┐ │
-│ │ Specialist 1 State  │ │
-│ ├─────────────────────┤ │
-│ │ Specialist 2 State  │ │
-│ ├─────────────────────┤ │
-│ │ Specialist 3 State  │ │
-│ └─────────────────────┘ │
-│                         │
-│ ┌─────────────────────┐ │
-│ │ Shared Results      │ │
-│ └─────────────────────┘ │
-└─────────────────────────┘
-  ~100 KB per orchestration
+```text
+Capability
+   ^
+   |
+   |                           ████████████████████████  V12 Workflow Automation
+   |                    █████████████████████████████  V11 Multi-Agent
+   |                 ████████████████████████         V10 Routing
+   |              ████████████████████                V9 RAG
+   |           ██████████████████                     V8 Reflection
+   |        ████████████████                          V7 Safety
+   |      ██████████████                              V6 Memory
+   |    ████████████                                  V5 Tool Registry
+   |  ██████████                                      V4 Planning
+   | ████████                                         V3 File Creation
+   | █████                                           V2 Tool Use
+   | ███                                             V1 Chat
+   +--------------------------------------------------> Versions
+       1   2   3   4   5   6   7   8   9   10  11  12
 ```
 
-</div>
+The pattern is clear: each step adds a new layer of intelligence.
 
 ---
 
-## 🎓 Learning Path with Estimated Time
+## 🧠 Why the repo is valuable
 
-<div align="center">
+This repository answers the question:
 
-```
-📚 RECOMMENDED LEARNING SEQUENCE
+> How do you go from a simple prompt-based model to an autonomous system?
 
-┌─────────────────────────────────────────────────────────────┐
-│  WEEK 1: FOUNDATIONS                                        │
-├─────────────────────────────────────────────────────────────┤
-│  Day 1-2: V1 Chat Agent              ⏱️ 2 hours             │
-│           └─ Understand LLM calling                        │
-│                                                             │
-│  Day 3-4: V2 File Reading            ⏱️ 3 hours             │
-│           └─ Learn tool schemas & loops                   │
-│                                                             │
-│  Day 5-7: V3 File Creation           ⏱️ 3 hours             │
-│           └─ Understand state changes                     │
-│                                                             │
-│  📊 Total: ~8 hours                                         │
-│  🎯 Checkpoint: "I understand how agents use tools"        │
-└─────────────────────────────────────────────────────────────┘
+The answer is not a single leap. It is a series of deliberate upgrades:
 
-┌─────────────────────────────────────────────────────────────┐
-│  WEEK 2: PLANNING & ORGANIZATION                            │
-├─────────────────────────────────────────────────────────────┤
-│  Day 8-9: V4 Planning Agent          ⏱️ 3 hours             │
-│           └─ Task decomposition                            │
-│                                                             │
-│  Day 10-11: V5 Tool Registry         ⏱️ 2 hours             │
-│             └─ Clean code patterns                         │
-│                                                             │
-│  📊 Total: ~5 hours                                         │
-│  🎯 Checkpoint: "I can make modular agents"                 │
-└─────────────────────────────────────────────────────────────┘
+1. Talk
+2. Read
+3. Write
+4. Plan
+5. Standardize
+6. Remember
+7. Protect
+8. Reflect
+9. Retrieve
+10. Route
+11. Coordinate
+12. Automate
 
-┌─────────────────────────────────────────────────────────────┐
-│  WEEK 3: INTELLIGENCE & SAFETY                              │
-├─────────────────────────────────────────────────────────────┤
-│  Day 12-13: V6 Memory Agent          ⏱️ 3 hours             │
-│             └─ Persistence patterns                        │
-│                                                             │
-│  Day 14-15: V7 Safety & Approval     ⏱️ 3 hours             │
-│             └─ Risk management                             │
-│                                                             │
-│  Day 16-17: V8 Reflection            ⏱️ 3 hours             │
-│             └─ Evaluation & retry                          │
-│                                                             │
-│  📊 Total: ~9 hours                                         │
-│  🎯 Checkpoint: "I understand safe, smart agents"          │
-└─────────────────────────────────────────────────────────────┘
-
-┌─────────────────────────────────────────────────────────────┐
-│  WEEK 4: ADVANCED & MULTI-AGENT                             │
-├─────────────────────────────────────────────────────────────┤
-│  Day 18-19: V9 RAG System            ⏱️ 4 hours             │
-│             └─ Knowledge retrieval                         │
-│                                                             │
-│  Day 20-21: V10 Routing              ⏱️ 3 hours             │
-│             └─ Task classification                         │
-│                                                             │
-│  Day 22-24: V11 Multi-Agent          ⏱️ 5 hours             │
-│             └─ Orchestration                               │
-│                                                             │
-│  Day 25-28: V12 Workflows            ⏱️ 6 hours             │
-│             └─ Advanced automation                         │
-│                                                             │
-│  📊 Total: ~18 hours                                        │
-│  🎯 Checkpoint: "I'm an expert in agentic AI!"              │
-└─────────────────────────────────────────────────────────────┘
-
-TOTAL TIME: ~40 hours of focused learning
-RESULT: Complete mastery of agentic AI patterns!
-```
-
-</div>
+That is exactly what agentic AI means in practice.
 
 ---
 
-## 🎬 Running Examples
+## 📁 Repository structure
 
-### Quick Start
+```text
+Agent-Builder/
+├── v01_chat_agent/
+├── v02_file_reading_agent/
+├── v03_file_creation_agent/
+├── v04_planning_agent/
+├── v05_reusable_tool_system/
+├── v06_memory/
+├── v07_safety_and_human_approval/
+├── v08_reflection_and_evaluation/
+├── v09_rag_knowledge_system/
+├── v10_agent_routing/
+├── v11_multi_agent_system/
+├── v12_agentic_workflow_automation/
+├── .env.example
+├── requirements.txt
+├── LICENSE
+├── README.md
+└── docs / notes / learning files
+```
+
+---
+
+## 🚀 Quick start
+
+### 1. Clone the repo
 
 ```bash
-# Clone and setup
 git clone https://github.com/anushree-011/Agent-Builder.git
 cd Agent-Builder
-
-# Create .env
-echo "OLLAMA_API_KEY=your_key" > .env
-echo "MODEL_NAME=gemma4:31b" >> .env
-
-# Start with V1
-cd v01_chat_agent && python chat_agent.py
 ```
 
-### Try Each Version
+### 2. Set environment variables
 
 ```bash
-# Foundation Phase
-cd v02_file_reading_agent && python file_agent.py      # Try reading files
-cd v03_file_creation_agent && python file_creation_agent.py  # Try creating files
-cd v04_planning_agent && python planner_agent.py        # Watch it plan!
+cp .env.example .env
+```
 
-# Intelligence Phase
-cd v06_memory && python memory_agent.py                 # Test memory
-cd v07_safety_and_human_approval && python human_approval_agent.py  # See safety in action
-cd v08_reflection_and_evaluation && python evaluation_agent.py  # Watch it reflect
+Then edit your `.env` file:
 
-# Orchestration Phase
-cd v10_agent_routing && python main.py                  # Test routing
-cd v11_multi_agent_system && python main.py             # Multi-agent magic!
+```env
+OLLAMA_API_KEY=your_key_here
+OLLAMA_BASE_URL=https://ollama.com/api
+MODEL_NAME=gemma4:31b
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run a version
+
+```bash
+cd v01_chat_agent
+python chat_agent.py
+```
+
+Or run a more advanced version:
+
+```bash
+cd v11_multi_agent_system
+python main.py
 ```
 
 ---
 
-## 🎯 Key Patterns You'll Master
+## 🧪 What each version feels like in practice
 
-```
-1️⃣ TOOL CALLING PATTERN
-   LLM sees tools → Decides to use → Calls with args → Gets result
-   
-2️⃣ AGENTIC LOOP
-   Observe → Decide → Act → Observe → Loop until done
-   
-3️⃣ PLANNING PATTERN  
-   Task → Decompose → Plan steps → Execute sequentially
-   
-4️⃣ REGISTRY PATTERN
-   Define tool once → Register → Available everywhere dynamically
-   
-5️⃣ SAFETY PATTERN
-   Classify risk → Check gate → Ask human if needed → Execute safely
-   
-6️⃣ REFLECTION PATTERN
-   Execute → Validate result → Evaluate → Retry if needed
-   
-7️⃣ ROUTING PATTERN
-   Classify task → Select specialist → Delegate → Collect result
-   
-8️⃣ ORCHESTRATION PATTERN
-   Plan → Route tasks → Run agents in parallel/sequence → Aggregate
+```text
+V1: "Hello, model. Can you answer me?"
+V2: "Read this file and summarize it."
+V3: "Create a folder and write a report."
+V4: "Plan and execute this project setup."
+V5: "Use the correct tool from the registry."
+V6: "Remember that I prefer Python."
+V7: "Delete this file only after approval."
+V8: "Check whether the file actually got created."
+V9: "Use the knowledge base to answer this question."
+V10: "Route this request to the right specialist."
+V11: "Coordinate file work plus memory work in one task."
+V12: "Run a full workflow from API call to result handling."
 ```
 
 ---
 
-## 📊 The Numbers
+## 🏁 The learning mindset
 
-<div align="center">
+This repo is designed to teach one important truth:
 
-```
-AGENT-BUILDER BY THE NUMBERS
+> Agents are not built in one step. They are built by gradually adding capabilities.
 
-┌──────────────────────────────────────────────────┐
-│  Versions:        12+                            │
-│  Total Code:      3,200+ lines                   │
-│  Tool Concepts:   8 major patterns               │
-│  Learning Time:   ~40 hours (complete mastery)   │
-│  Difficulty:      Beginner → Expert              │
-│  Practical Skills: 100% applicable                │
-│  Success Rate:    95%+ (if you follow along)     │
-│  Job Readiness:   Intermediate Agent Engineer    │
-└──────────────────────────────────────────────────┘
+The learning progression is not random. Every version solves a core problem:
 
-Each version adds:
-  - 10-30% more code
-  - 1-2 new concepts
-  - 2-5 new capabilities
-  - 1-3 hours learning
-  - Real-world applicability
-```
+- V1 solves conversation
+- V2 solves access to real data
+- V3 solves actuation
+- V4 solves planning
+- V5 solves structure
+- V6 solves continuity
+- V7 solves safety
+- V8 solves validation
+- V9 solves knowledge
+- V10 solves delegation
+- V11 solves collaboration
+- V12 solves automation
 
-</div>
+That is the real apprenticeship of agentic AI.
 
 ---
 
-## 🏆 What You'll Build
+## 🌟 Final takeaway
 
-- ✅ A chatbot that reads files (V2)
-- ✅ An agent that creates files/folders (V3)
-- ✅ A planner that breaks down tasks (V4)
-- ✅ A modular tool system (V5)
-- ✅ An agent that remembers (V6)
-- ✅ A safe agent requiring approval (V7)
-- ✅ An agent that self-evaluates (V8)
-- ✅ An agent that retrieves knowledge (V9)
-- ✅ A router delegating to specialists (V10)
-- ✅ A multi-agent team coordinator (V11)
-- ✅ A workflow automation engine (V12)
+Agent-Builder is a blueprint for understanding the evolution from a simple chatbot to a serious AI system.
 
----
+If you are learning agentic AI, this repository gives you a practical roadmap:
 
-## 🔗 Quick Links
+```text
+Start simple → add tools → add planning → add memory → add safety → add reflection → add knowledge → add orchestration → automate workflows.
+```
 
-| Version | Folder | Focus | Try It |
-|---------|--------|-------|--------|
-| V1 | `v01_chat_agent` | LLM Basics | 💬 Chat |
-| V2 | `v02_file_reading_agent` | Tool Calling | 📖 Read |
-| V3 | `v03_file_creation_agent` | State Changes | ✍️ Write |
-| V4 | `v04_planning_agent` | Planning | 📋 Plan |
-| V5 | `v05_reusable_tool_system` | Registry | 🔧 Registry |
-| V6 | `v06_memory` | Persistence | 💾 Remember |
-| V7 | `v07_safety_and_human_approval` | Safety | 🔒 Approve |
-| V8 | `v08_reflection_and_evaluation` | Validation | 🎯 Evaluate |
-| V9 | `v09_rag_knowledge_system` | Knowledge | 📚 Retrieve |
-| V10 | `v10_agent_routing` | Routing | 🚦 Route |
-| V11 | `v11_multi_agent_system` | Orchestration | 👥 Coordinate |
-| V12 | `v12_agentic_workflow_automation` | Workflows | 🌐 Automate |
+This is not just code. This is the story of how AI agents become more capable, more reliable, and more useful.
 
 ---
 
 <div align="center">
 
-### 🎓 Ready to Master Agentic AI?
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00E5FF&center=true&vCenter=true&width=800&lines=Build+Agents+Step+by+Step;Learn+the+Architecture;Explore+the+Evolution" alt="Footer banner" />
 
-```
-Start with V1 → Progress through V12 → Become an Expert
-
-            Your Journey Starts Now! 🚀
-            
-      github.com/anushree-011/Agent-Builder
-```
-
-**Made with ❤️ for AI Enthusiasts | Star ⭐ if This Helped You!**
+<p><strong>Built for learning, experimenting, and understanding AI agents.</strong></p>
 
 </div>
