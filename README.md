@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=28&pause=1000&color=7C3AED&center=true&vCenter=true&width=1000&lines=Agentic+AI+Builder;From+Chatbot+to+Multi-Agent+System;V1+to+V12+Evolution;Build+Agents+with+Tools;Think%2C+Plan%2C+Act%2C+Remember" alt="Animated Agent-Builder banner" />
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=28&pause=1000&color=7C3AED&center=true&vCenter=true&width=1000&lines=From+Simple+Chat+to+Autonomous+AI+Systems;12+Progressive+Versions;Learn+Agent+Building+Visually" alt="Agent-Builder Banner" />
 
 <p>
   <img src="https://img.shields.io/badge/Python-3.8%2B-3670A0?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
@@ -14,382 +14,326 @@
 
 </div>
 
-> A progressive learning repository for building AI agents from scratch, one capability at a time.
-
 ---
 
-## 🚀 The Story: How Agent-Builder Grows
+## 🎯 The Journey: 12 Agents, One Learning Path
 
-This project is not a single agent. It is a structured journey of agent evolution.
+Each version adds **one new superpower**. Watch how an AI agent evolves from basic chat to a full automation system.
 
-Each version adds a new idea, a new capability, and a new level of intelligence.
+### **The Visual Growth Path**
 
-```text
-V1  →  V2  →  V3  →  V4  →  V5  →  V6  →  V7  →  V8  →  V9  →  V10  →  V11  →  V12
-│     │     │     │     │     │     │     │     │      │       │       │
-│     │     │     │     │     │     │     │     │      │       │       │
-Chat  Tools  Action  Plan  Registry  Memory  Safety  Reflection  RAG  Routing  Multi-Agent  Workflow
 ```
-
-The growth pattern is simple:
-
-```text
-Simple response
-   ↓
-Can use tools
-   ↓
-Can act on the real world
-   ↓
-Can plan before acting
-   ↓
-Can remember and improve
-   ↓
-Can reason about safety and failure
-   ↓
-Can retrieve knowledge
-   ↓
-Can delegate tasks to specialists
-   ↓
-Can coordinate multiple agents
-   ↓
-Can automate full workflows
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                                                                             │
+│  💬         📖         📝         🎯         🔧         💾         🛡️          │
+│  CHAT  →  READ  →  WRITE  →  PLAN  →  TOOLS  →  MEMORY  →  SAFETY  →  ...  │
+│  V1        V2       V3       V4       V5        V6         V7              │
+│                                                                             │
+│  🤔         📚         🔀         🎭         🤝         ⚙️                    │
+│  ...  →  REFLECT  →  RETRIEVE  →  ROUTE  →  AGENTS  →  WORKFLOW           │
+│          V8         V9          V10       V11         V12                   │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🎯 What this repo teaches
+## 📊 What You'll Learn (Visual Overview)
 
-Agent-Builder is a hands-on lab for learning how real agentic systems are built.
-
-It shows the core pattern behind AI agents:
-
-```text
-User request
-   ↓
-LLM decides what to do
-   ↓
-Tool or action is executed
-   ↓
-Result is observed
-   ↓
-Model responds again with better context
 ```
-
-This repository demonstrates the most important ideas in agent design:
-
-- Tool calling
-- File and folder operations
-- Planning before execution
-- Reusable tool registries
-- Memory and persistence
-- Safety and approvals
-- Reflection and validation
-- Retrieval-Augmented Generation
-- Routing based on task type
-- Multi-agent coordination
-- Workflow automation
-
----
-
-## 🧭 The 12-Version Evolution
-
-Each version solves one core problem and adds one major improvement.
-
-### V1 — Chat Agent
-
-```text
-Goal: Let the model talk.
-
-What changed:
-- Basic LLM interaction
-- Prompt + response loop
-
-Why it matters:
-This is the foundation. Before tools, memory, or planning, the agent must know how to respond.
-```
-
-### V2 — File Reading Agent
-
-```text
-Goal: Let the agent read from the real world.
-
-What changed:
-- Added tool calling
-- Added file listing and file reading
-- Added agentic loop: decide → act → observe → respond
-
-Why it matters:
-The model is no longer limited to static replies. It can inspect files and act on real content.
-```
-
-### V3 — File Creation Agent
-
-```text
-Goal: Let the agent create files and folders.
-
-What changed:
-- Added write actions
-- Added path management
-- Added file creation tools
-
-Why it matters:
-Now the agent can produce state changes. It is not just answering — it is creating things.
-```
-
-### V4 — Planning Agent
-
-```text
-Goal: Make the agent think before acting.
-
-What changed:
-- Added planning step
-- Break task into smaller steps
-- Execute sequentially
-
-Why it matters:
-This is where agent behavior becomes more reliable. Instead of jumping directly into actions, it creates a plan.
-```
-
-### V5 — Reusable Tool System
-
-```text
-Goal: Build a cleaner, scalable tool architecture.
-
-What changed:
-- Added a tool registry
-- Tools are registered once and reused
-- Agent loop becomes cleaner and more modular
-
-Why it matters:
-This is a major architecture improvement. Instead of hardcoded action logic, tools become reusable building blocks.
-```
-
-### V6 — Memory Agent
-
-```text
-Goal: Let the agent remember.
-
-What changed:
-- Added short-term memory
-- Added persistent memory via SQLite
-- Added save/search memory behavior
-
-Why it matters:
-The agent can now carry context across sessions and reuse facts later.
-```
-
-### V7 — Safety & Human Approval
-
-```text
-Goal: Keep agent actions safe.
-
-What changed:
-- Added risk classification
-- Added approval-required flows
-- Added safety checks before sensitive tools run
-
-Why it matters:
-This is the step that makes agent systems more responsible. The model must not execute risky actions blindly.
-```
-
-### V8 — Reflection & Evaluation
-
-```text
-Goal: Let the agent check whether it succeeded.
-
-What changed:
-- Added reflection loop
-- Added evaluation of result quality
-- Added retry logic for failed actions
-
-Why it matters:
-The agent becomes less fragile. It learns to verify what happened after an action and fix mistakes when needed.
-```
-
-### V9 — RAG Knowledge System
-
-```text
-Goal: Let the agent retrieve information from knowledge sources.
-
-What changed:
-- Document loading
-- Knowledge retrieval
-- Context-aware answers from past information
-
-Why it matters:
-This introduces memory beyond conversation — access to documents, policy data, and facts from external knowledge.
-```
-
-### V10 — Agent Routing
-
-```text
-Goal: Decide which specialist should handle the task.
-
-What changed:
-- Added router agent
-- Task classification
-- Delegation to specialist agents
-
-Why it matters:
-Instead of one large agent trying to do everything, the system routes tasks to the best specialized handler.
-```
-
-### V11 — Multi-Agent System
-
-```text
-Goal: Use multiple agents working together.
-
-What changed:
-- Added coordinator agent
-- Shared state across agents
-- Specialized agents collaborate
-
-Why it matters:
-This mirrors real-world systems: different agents handle different skills, while a coordinator orchestrates them.
-```
-
-### V12 — Workflow Automation
-
-```text
-Goal: Turn agent behavior into business-like workflows.
-
-What changed:
-- Added workflow execution patterns
-- External service orchestration
-- Checkpoints and longer-running flows
-
-Why it matters:
-This is the move from “single agent response” to “agent-driven automation system.”
+┌───────────────────────────────────────────────────────────────────┐
+│ EACH VERSION = ONE CAPABILITY                                     │
+├───────────────────────────────────────────────────────────────────┤
+│                                                                   │
+│ V1 💬 Chat Agent           → Respond to prompts                   │
+│    User: "Hello"                                                 │
+│    Agent: "Hi there!"                                            │
+│                                                                   │
+│ V2 📖 Read Agent           → Access files                         │
+│    User: "Read this.txt"                                         │
+│    Agent: Opens file ✓ Reads content ✓ Responds                  │
+│                                                                   │
+│ V3 📝 Write Agent          → Create files                         │
+│    User: "Create report.pdf"                                     │
+│    Agent: Creates file ✓ Writes content ✓ Done                   │
+│                                                                   │
+│ V4 🎯 Planning Agent       → Think before acting                  │
+│    User: "Setup a project"                                       │
+│    Agent: 1. Create folder 2. Add files 3. Configure → Execute   │
+│                                                                   │
+│ V5 🔧 Tool System          → Use reusable tools                   │
+│    Agent: Uses registry of tools (instead of hardcoded)          │
+│                                                                   │
+│ V6 💾 Memory Agent         → Remember conversations               │
+│    Agent: Saves facts to database → Retrieves later              │
+│                                                                   │
+│ V7 🛡️  Safety Agent         → Ask before risky actions            │
+│    Agent: "Delete file? [NEEDS APPROVAL]"                        │
+│                                                                   │
+│ V8 🤔 Reflection Agent      → Check if it worked                  │
+│    Agent: "Did that work?" → Validates → Retries if needed       │
+│                                                                   │
+│ V9 📚 RAG Agent            → Retrieve from knowledge base         │
+│    Agent: Searches docs → Finds answer → Responds with proof     │
+│                                                                   │
+│ V10 🔀 Router Agent        → Send to the right specialist         │
+│    Agent: "This is a file task" → Routes to File Expert          │
+│                                                                   │
+│ V11 🎭 Multi-Agent         → Agents collaborate                   │
+│    Agent A (files) + Agent B (memory) work together              │
+│                                                                   │
+│ V12 ⚙️  Workflow            → Automate full processes             │
+│    Agent: Runs multi-step business workflows                     │
+│                                                                   │
+└───────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🧱 The architecture evolution
+## 🚀 Quick Start (5 Minutes)
 
-```mermaid
-flowchart LR
-    A[V1: Chat] --> B[V2: Read Tools]
-    B --> C[V3: Write Tools]
-    C --> D[V4: Planning]
-    D --> E[V5: Tool Registry]
-    E --> F[V6: Memory]
-    F --> G[V7: Safety]
-    G --> H[V8: Reflection]
-    H --> I[V9: RAG]
-    I --> J[V10: Routing]
-    J --> K[V11: Multi-Agent]
-    K --> L[V12: Workflow Automation]
-```
-
-This is the actual story of the repository:
-
-- V1 teaches the basic model loop.
-- V2 adds file access.
-- V3 adds real-world action.
-- V4 adds planning.
-- V5 adds structure and maintainability.
-- V6 adds persistence.
-- V7 adds safety.
-- V8 adds self-checking.
-- V9 adds external knowledge.
-- V10 adds delegation.
-- V11 adds teamwork.
-- V12 adds system-level automation.
-
----
-
-## 🔥 Capability growth over time
-
-```text
-Capability
-   ^
-   |
-   |                           ████████████████████████  V12 Workflow Automation
-   |                    █████████████████████████████  V11 Multi-Agent
-   |                 ████████████████████████         V10 Routing
-   |              ████████████████████                V9 RAG
-   |           ██████████████████                     V8 Reflection
-   |        ████████████████                          V7 Safety
-   |      ██████████████                              V6 Memory
-   |    ████████████                                  V5 Tool Registry
-   |  ██████████                                      V4 Planning
-   | ████████                                         V3 File Creation
-   | █████                                           V2 Tool Use
-   | ███                                             V1 Chat
-   +--------------------------------------------------> Versions
-       1   2   3   4   5   6   7   8   9   10  11  12
-```
-
-The pattern is clear: each step adds a new layer of intelligence.
-
----
-
-## 🧠 Why the repo is valuable
-
-This repository answers the question:
-
-> How do you go from a simple prompt-based model to an autonomous system?
-
-The answer is not a single leap. It is a series of deliberate upgrades:
-
-1. Talk
-2. Read
-3. Write
-4. Plan
-5. Standardize
-6. Remember
-7. Protect
-8. Reflect
-9. Retrieve
-10. Route
-11. Coordinate
-12. Automate
-
-That is exactly what agentic AI means in practice.
-
----
-
-## 📁 Repository structure
-
-```text
-Agent-Builder/
-├── v01_chat_agent/
-├── v02_file_reading_agent/
-├── v03_file_creation_agent/
-├── v04_planning_agent/
-├── v05_reusable_tool_system/
-├── v06_memory/
-├── v07_safety_and_human_approval/
-├── v08_reflection_and_evaluation/
-├── v09_rag_knowledge_system/
-├── v10_agent_routing/
-├── v11_multi_agent_system/
-├── v12_agentic_workflow_automation/
-├── .env.example
-├── requirements.txt
-├── LICENSE
-├── README.md
-└── docs / notes / learning files
-```
-
----
-
-## 🚀 Quick start
-
-### 1. Clone the repo
-
+### 1️⃣ Clone & Setup
 ```bash
 git clone https://github.com/anushree-011/Agent-Builder.git
 cd Agent-Builder
-```
-
-### 2. Set environment variables
-
-```bash
 cp .env.example .env
 ```
 
-Then edit your `.env` file:
+### 2️⃣ Install
+```bash
+pip install -r requirements.txt
+```
+
+### 3️⃣ Run (Start Simple!)
+```bash
+# Start with V1 - the simplest one
+cd v01_chat_agent
+python chat_agent.py
+
+# Or jump to something complex
+cd v11_multi_agent_system
+python main.py
+```
+
+---
+
+## 🗂️ Folder Structure at a Glance
+
+```
+Agent-Builder/
+│
+├── v01_chat_agent/                    💬 Just respond
+├── v02_file_reading_agent/            📖 Read files
+├── v03_file_creation_agent/           📝 Create files
+├── v04_planning_agent/                🎯 Make a plan
+├── v05_reusable_tool_system/          🔧 Clean tools
+├── v06_memory/                        💾 Remember things
+├── v07_safety_and_human_approval/     🛡️  Safety first
+├── v08_reflection_and_evaluation/     🤔 Self-check
+├── v09_rag_knowledge_system/          📚 Use documents
+├── v10_agent_routing/                 🔀 Route tasks
+├── v11_multi_agent_system/            🎭 Agents work together
+├── v12_agentic_workflow_automation/   ⚙️  Full automation
+│
+├── requirements.txt
+├── .env.example
+└── README.md
+```
+
+---
+
+## 🎓 Pick Your Learning Path
+
+### 👶 **"I'm brand new to AI agents"**
+```
+START HERE: V1 → V2 → V3 → V4 → V5
+```
+Learn the fundamentals, tool usage, and basic planning.
+
+### 🎯 **"I want to understand how agents think"**
+```
+V4 → V8 → V10
+```
+Focus on planning, reflection, and routing logic.
+
+### 💪 **"I want to build production systems"**
+```
+V5 → V6 → V7 → V11 → V12
+```
+Learn structure, memory, safety, coordination, and workflows.
+
+### 🔍 **"I want everything"**
+```
+V1 → V2 → V3 → V4 → V5 → V6 → V7 → V8 → V9 → V10 → V11 → V12
+```
+The complete master class in agent development.
+
+---
+
+## 🔥 What Happens at Each Stage
+
+### **The Transformation**
+
+```
+┌──────────────────────────────────────────────────┐
+│ BEFORE (V1): Simple Echo                         │
+├──────────────────────────────────────────────────┤
+│ User: "What's 2+2?"                              │
+│ Agent: "4"                                        │
+│ 🚫 Can't read files, can't think, can't plan     │
+└──────────────────────────────────────────────────┘
+
+⬇️  BUILD V2 (Add file reading)
+⬇️  BUILD V3 (Add file writing)
+⬇️  BUILD V4 (Add planning)
+⬇️  BUILD V5-V12 (Add more powers)
+⬇️
+
+┌──────────────────────────────────────────────────┐
+│ AFTER (V12): Full Automation System              │
+├──────────────────────────────────────────────────┤
+│ User: "Build a Python project"                   │
+│ Agent:                                            │
+│  ✅ Plans the structure                           │
+│  ✅ Creates folders & files                       │
+│  ✅ Reads documentation for best practices       │
+│  ✅ Routes to specialists if needed              │
+│  ✅ Coordinates multiple agents                  │
+│  ✅ Remembers preferences                        │
+│  ✅ Asks approval for risky actions              │
+│  ✅ Validates the result                         │
+│  ✅ Runs the full workflow end-to-end            │
+└──────────────────────────────────────────────────┘
+```
+
+---
+
+## 🧩 Architecture at a Glance
+
+### **How the AI Loop Works** (Same in all versions, just gets smarter)
+
+```
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│  💭 User Request                                │
+│        ↓                                        │
+│  🧠 LLM Thinks (What should I do?)              │
+│        ↓                                        │
+│  🔨 Execute Tool (File, Read, Write, etc.)     │
+│        ↓                                        │
+│  👁️  Observe Result                             │
+│        ↓                                        │
+│  🗣️  Respond to User                            │
+│        ↓                                        │
+│  💾 Save to Memory (if enabled)                 │
+│                                                 │
+└─────────────────────────────────────────────────┘
+```
+
+**Each version just adds more tools and smarter decision-making.**
+
+---
+
+## 🎬 See It In Action
+
+### **Example: V1 (Basic Chat)**
+```python
+User: "Hello"
+Agent: "Hi! How can I help?"
+Time: <1 second
+```
+
+### **Example: V4 (Planning)**
+```python
+User: "Create a Python project structure"
+Agent: 
+  Plan:
+    1. Create /src directory
+    2. Create /tests directory
+    3. Create __init__.py
+    4. Create requirements.txt
+  Execute: ✓ ✓ ✓ ✓
+  Done!
+```
+
+### **Example: V11 (Multi-Agent)**
+```python
+User: "Create a project and remember my preferences"
+Agent Coordinator: "I need 2 agents for this"
+  → Agent A (FileManager): Creates project structure
+  → Agent B (Memory): Saves user preferences
+  → Both work together → Task complete!
+```
+
+---
+
+## 🌟 Why This Repo Matters
+
+**Question:** How do you go from ChatGPT to an autonomous AI system?
+
+**Answer:** Step by step.
+
+```
+This repo shows you EXACTLY how to do it.
+```
+
+Each version is:
+- ✅ **Complete & runnable** (not just theory)
+- ✅ **Progressive** (each builds on the last)
+- ✅ **Visual** (you see what changes at each step)
+- ✅ **Hands-on** (run the code yourself)
+
+---
+
+## 💡 The Core Idea
+
+> **Agents don't appear fully formed. They're built by systematically adding capabilities.**
+
+```
+Simple Response
+    ↓
++ Tool Usage
+    ↓
++ Planning
+    ↓
++ Memory
+    ↓
++ Safety
+    ↓
++ Reflection
+    ↓
++ Knowledge Retrieval
+    ↓
++ Routing & Delegation
+    ↓
++ Multi-Agent Coordination
+    ↓
+= Autonomous AI System
+```
+
+**This repository is that exact journey.**
+
+---
+
+## 🎓 What You'll Be Able to Do
+
+By the end, you'll understand:
+
+- ✅ How tool calling works
+- ✅ How LLMs make decisions
+- ✅ How to plan before executing
+- ✅ How to build tool registries
+- ✅ How to add memory to agents
+- ✅ How to implement safety checks
+- ✅ How to route tasks intelligently
+- ✅ How to coordinate multiple agents
+- ✅ How to automate workflows
+
+---
+
+## 🚀 Environment Setup
+
+Create a `.env` file (copy from `.env.example`):
 
 ```env
 OLLAMA_API_KEY=your_key_here
@@ -397,90 +341,54 @@ OLLAMA_BASE_URL=https://ollama.com/api
 MODEL_NAME=gemma4:31b
 ```
 
-### 3. Install dependencies
-
+Then:
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Run a version
-
-```bash
-cd v01_chat_agent
-python chat_agent.py
-```
-
-Or run a more advanced version:
-
-```bash
-cd v11_multi_agent_system
-python main.py
-```
-
 ---
 
-## 🧪 What each version feels like in practice
+## 📖 Recommended Reading Order
 
-```text
-V1: "Hello, model. Can you answer me?"
-V2: "Read this file and summarize it."
-V3: "Create a folder and write a report."
-V4: "Plan and execute this project setup."
-V5: "Use the correct tool from the registry."
-V6: "Remember that I prefer Python."
-V7: "Delete this file only after approval."
-V8: "Check whether the file actually got created."
-V9: "Use the knowledge base to answer this question."
-V10: "Route this request to the right specialist."
-V11: "Coordinate file work plus memory work in one task."
-V12: "Run a full workflow from API call to result handling."
 ```
-
----
-
-## 🏁 The learning mindset
-
-This repo is designed to teach one important truth:
-
-> Agents are not built in one step. They are built by gradually adding capabilities.
-
-The learning progression is not random. Every version solves a core problem:
-
-- V1 solves conversation
-- V2 solves access to real data
-- V3 solves actuation
-- V4 solves planning
-- V5 solves structure
-- V6 solves continuity
-- V7 solves safety
-- V8 solves validation
-- V9 solves knowledge
-- V10 solves delegation
-- V11 solves collaboration
-- V12 solves automation
-
-That is the real apprenticeship of agentic AI.
-
----
-
-## 🌟 Final takeaway
-
-Agent-Builder is a blueprint for understanding the evolution from a simple chatbot to a serious AI system.
-
-If you are learning agentic AI, this repository gives you a practical roadmap:
-
-```text
-Start simple → add tools → add planning → add memory → add safety → add reflection → add knowledge → add orchestration → automate workflows.
+🟢 Start Here
+    ↓
+    v01_chat_agent/          (10 min)
+    v02_file_reading_agent/  (15 min)
+    v03_file_creation_agent/ (15 min)
+    v04_planning_agent/      (20 min)
+    ↓
+🟡 Intermediate
+    ↓
+    v05_reusable_tool_system/ (20 min)
+    v06_memory/              (20 min)
+    v07_safety_and_human_approval/ (20 min)
+    ↓
+🔴 Advanced
+    ↓
+    v08_reflection_and_evaluation/ (25 min)
+    v09_rag_knowledge_system/ (25 min)
+    v10_agent_routing/       (25 min)
+    v11_multi_agent_system/  (30 min)
+    v12_agentic_workflow_automation/ (30 min)
 ```
-
-This is not just code. This is the story of how AI agents become more capable, more reliable, and more useful.
 
 ---
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00E5FF&center=true&vCenter=true&width=800&lines=Build+Agents+Step+by+Step;Learn+the+Architecture;Explore+the+Evolution" alt="Footer banner" />
+**🎯 Ready to build agents?**
 
-<p><strong>Built for learning, experimenting, and understanding AI agents.</strong></p>
+```
+Pick a version → Run the code → See it work → Learn the pattern → Move to next
+```
+
+**Start with V1. Master the fundamentals. Build your way up.**
+
+---
+
+Made with ❤️ for AI learners everywhere.
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=00E5FF&center=true&vCenter=true&width=600&lines=Master+Agentic+AI;One+Version+at+a+Time" alt="Footer" />
 
 </div>
