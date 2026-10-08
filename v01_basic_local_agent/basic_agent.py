@@ -1,25 +1,22 @@
 import os
+import time
+import requests
 from dotenv import load_dotenv
-from google import genai
-from google.genai import types
 
 # ---------------------------------------------------------
 # CONCEPT 1: ENVIRONMENT & API KEYS
 # ---------------------------------------------------------
-# We use python-dotenv to load the GEMINI_API_KEY from our .env file.
-# The Gemini SDK automatically looks for the GEMINI_API_KEY environment variable.
+# We use python-dotenv to load the OLLAMA_API_KEY from our .env file.
 load_dotenv()
 
-# We specify the model we want to use. gemini-3.8-flash-8b is smaller, faster, and highly available.
-MODEL_NAME = os.getenv("MODEL_NAME", "gemini-3.8-flash-8b")
-
-# Initialize the Gemini client
-# It will automatically pick up the GEMINI_API_KEY from the environment
-client = genai.Client()
+# We specify the model we want to use.
+MODEL_NAME = os.getenv("MODEL_NAME", "gemma4:31b")
+OLLAMA_API_KEY = os.getenv("OLLAMA_API_KEY", "")
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "https://ollama.com/api")
 
 def ask_llm(prompt_text, system_context=""):
     """
-    Sends a prompt to the Gemini API and gets a response.
+    Sends a prompt to the Ollama Cloud API and gets a response.
     
     Parameters:
     - prompt_text: The actual question or task from the user.
@@ -29,32 +26,54 @@ def ask_llm(prompt_text, system_context=""):
     # ---------------------------------------------------------
     # CONCEPT 2: PROMPTS AND CONFIGURATION
     # ---------------------------------------------------------
-    # We configure the request by setting the system instructions.
-    # The SDK allows us to pass a config object with these rules.
-    config = types.GenerateContentConfig(
-        system_instruction=system_context,
-        temperature=0.7 # Optional: Controls how creative/random the output is (0.0 to 2.0)
-    )
-    
-    try:
-        # We send the request to Google's servers
-        response = client.models.generate_content(
-            model=MODEL_NAME,
-            contents=prompt_text,
-            config=config
-        )
-        return response.text
-        
-    except Exception as e:
-        return f"An error occurred: {e}"
+    # We build the messages list with an optional system prompt
+    # and the user's message, then send it to the Ollama API.
+    messages = []
+    if system_context:
+        messages.append({"role": "system", "content": system_context})
+    messages.append({"role": "user", "content": prompt_text})
+
+    payload = {
+        "model": MODEL_NAME,
+        "messages": messages,
+        "stream": False,
+        "options": {
+            "temperature": 0.7  # Controls how creative/random the output is
+        }
+    }
+
+    headers = {
+        "Authorization": f"Bearer {OLLAMA_API_KEY}",
+        "Content-Type": "application/json"
+    }
+
+    max_retries = 3
+    for attempt in range(max_retries + 1):
+        try:
+            response = requests.post(
+                f"{OLLAMA_BASE_URL}/chat",
+                json=payload,
+                headers=headers,
+                timeout=60
+            )
+            response.raise_for_status()
+            data = response.json()
+            return data["message"]["content"]
+        except Exception as e:
+            if attempt < max_retries and ("503" in str(e) or "504" in str(e) or "timeout" in str(e).lower()):
+                wait = 2 ** (attempt + 1)  # 2s, 4s, 8s
+                print(f"  ⏳ Model busy, retrying in {wait}s... (attempt {attempt + 1}/{max_retries})")
+                time.sleep(wait)
+            else:
+                return f"An error occurred: {e}"
 
 def main():
     # Make sure the API key is actually set before starting
-    if not os.getenv("GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY") == "your_gemini_api_key_here":
-        print("❌ ERROR: Please open the .env file and add your real GEMINI_API_KEY.")
+    if not OLLAMA_API_KEY:
+        print("❌ ERROR: Please open the .env file and add your OLLAMA_API_KEY.")
         return
 
-    print(f"🤖 Starting V1 Agent (Powered by {MODEL_NAME})")
+    print(f"🤖 Starting V1 Agent (Powered by {MODEL_NAME} via Ollama Cloud)")
     print("Type 'exit' to quit.\n")
     
     # ---------------------------------------------------------
