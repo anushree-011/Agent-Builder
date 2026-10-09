@@ -1,5 +1,27 @@
 # V2 — File Reading Agent 📂
 
+<div align="center">
+
+## 🧭 Learning Snapshot
+
+```text
+User asks: "Find or read a file"
+        ↓
+Agent locates matches
+        ↓
+Agent reads allowed files
+        ↓
+Agent processes content
+        ↓
+Agent returns useful summary/result
+```
+
+**This version teaches the agent to observe and understand files, not just answer questions.**
+
+</div>
+
+---
+
 ### Teach an AI agent to find and read files on your computer
 
 ---
@@ -113,11 +135,11 @@ The exact function names are design choices; they are examples, not built-in Pyt
 
 | Approach | How It Works | When Should We Choose It? | Limitations |
 |---|---|---|---|
-| **Python file operations** | Uses built-in Python functionality to list, open, and read files. | When learning the fundamentals of file handling. | Specialized formats may need extra libraries. |
+| **Python file operations** | Uses built-in Python functionality to list, open, and read files. | When learning the fundamentals of file handling. | Specialized formats may need extra libraries.[...] |
 | **Operating-system search** | Uses operating-system features to locate files. | When we want to use existing file-search capabilities. | Behavior differs across operating systems. |
-| **Content extraction libraries** | Uses libraries to extract text from PDFs, Word documents, and other formats. | When the agent needs to read more than plain text. | Each format may require a different library. |
-| **AI-directed tool calling** | The model selects an available file operation based on the user's request. | When users should be able to ask for file operations in natural language. | The model can choose the wrong function; execution must be validated. |
-| **MCP (Model Context Protocol)** | Provides a standard way for AI applications to connect to external tools and data sources through MCP servers. | When multiple compatible AI clients need to access the same file tools. | Requires additional setup and careful permission management. |
+| **Content extraction libraries** | Uses libraries to extract text from PDFs, Word documents, and other formats. | When the agent needs to read more than plain text. | Each format may require a specialized reader. |
+| **AI-directed tool calling** | The model selects an available file operation based on the user's request. | When users should be able to ask for file operations in natural language. | The model may choose the wrong tool or provide invalid parameters. |
+| **MCP (Model Context Protocol)** | Provides a standard way for AI applications to connect to external tools and data sources through MCP servers. | When multiple compatible AI clients need to access the same file tooling. | Requires an MCP server and compatible client setup. |
 
 These approaches can work together. For example, AI-directed tool calling can select a function, and that function can use Python file operations to read the requested file.
 
@@ -155,4 +177,3 @@ A file-reading agent connects an AI application to information stored on a compu
 The basic process is:
 
 **User request → Find file → Read contents → Process information → Return result**
-
