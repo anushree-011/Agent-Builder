@@ -1,204 +1,913 @@
-<!-- ══════════ HERO (hand-drawn animated SVG: assets/hero.svg) ══════════ -->
-<img src="./assets/hero.svg" width="100%" alt="Krishna Raju — Engineer. Developer. Problem eliminator."/>
-
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=2400&pause=900&color=00E5FF&center=true&vCenter=true&width=780&height=44&lines=I+replace+hours+of+work+with+scripts...;Then+pretend+it+was+%22team+effort%22.+%F0%9F%98%8F;Built+for+the+factory+floor%2C+not+the+demo+day.;Electrical+%26+Electronics+Engineer+%7C+Patent+Holder+%F0%9F%87%AE%F0%9F%87%B3;IIT+Bombay+NEC+%E2%80%94+Rank+7+across+1500%2B+Colleges" alt="I don't do busywork. I delete it."/>
+# 🚀 Agent-Builder
+## *Watch AI Agents Evolve From Chatbot to Autonomous System*
 
-<a href="mailto:krishnarajus2004@gmail.com"><img src="https://img.shields.io/badge/Say_hi-FFB300?style=for-the-badge&logo=maildotru&logoColor=050b18" alt="Email"/></a>
-<a href="https://linkedin.com/in/krishnarajus2004"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-<a href="https://test-schedule-ittl.netlify.app"><img src="https://img.shields.io/badge/Test_Planner-00E5FF?style=for-the-badge&logo=netlify&logoColor=050b18" alt="Test Planner live demo"/></a>
-<a href="https://indotech-transformers.netlify.app"><img src="https://img.shields.io/badge/Industrial_Portal-7CF9FF?style=for-the-badge&logo=netlify&logoColor=050b18" alt="Industrial Portal live app"/></a>
-<img src="https://komarev.com/ghpvc/?username=KRISH-exe-29&style=for-the-badge&color=050b18&label=VISITORS+CHARGED" alt="Profile views"/>
-
-<br/><br/>
-
-<img src="./assets/terminal.svg" width="720" alt="$ whoami — builds the software a transformer factory actually runs on"/>
+![Agent Evolution](https://img.shields.io/badge/AI_Evolution-12_Versions-8B5CF6?style=for-the-badge&logo=sparkles)
+![Python](https://img.shields.io/badge/Python-3.8%2B-3670A0?style=for-the-badge&logo=python&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-Local_LLM-8B5CF6?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-FFD166?style=for-the-badge)
+![Learning Path](https://img.shields.io/badge/Complete%20Learning%20Path-%7%20Hours-FF6B6B?style=for-the-badge)
 
 </div>
 
-<img src="./assets/divider.svg" width="100%" alt=""/>
-
-<!-- ══════════ PITCH ══════════ -->
-<h2 align="center">🧲 Why you'll want to stick around</h2>
-
-<table align="center">
-<tr>
-<td align="center" width="33%">🏭<br/><b>Shipped, not "side-projected"</b><br/><sub>My code runs dispatch, gate passes<br/>and testing on a real shop floor</sub></td>
-<td align="center" width="33%">⚡<br/><b>Hours → seconds</b><br/><sub>30-min manual entry → &lt;30s automation.<br/>PDF in, BOM + Excel report out.</sub></td>
-<td align="center" width="33%">🔒<br/><b>Secure by default</b><br/><sub>IEC 60076 testing compliance,<br/>role-based access & OTP authentication</sub></td>
-</tr>
-</table>
-
-<img src="./assets/divider.svg" width="100%" alt=""/>
-
-<!-- ══════════ PROJECTS ══════════ -->
-<h2 align="center">🚀 Live on the Grid</h2>
-
-| | Project | The flex | Stack | Status |
-|:-:|:--|:--|:--|:-:|
-| 🚚 | [**Dispatch Management System**](https://github.com/KRISH-exe-29/Dispatch-ITTL) | Work order → packing → loading → vehicle gate pass. 5 roles, dispatch calendar, auto email escalations | `JavaScript` `React` `Supabase` `PL/pgSQL` `Nodemailer` | ![](https://img.shields.io/badge/PRODUCTION-00e5ff?style=flat-square&labelColor=050b18) |
-| 🔍 | [**Transformer Test Planner**](https://github.com/KRISH-exe-29/transformer-test-planner) | 40 IEC 60076 test suite, multi-unit scheduler, automated Excel export & live status dashboard | `TypeScript` `React` `Vite` `Netlify` | [![](https://img.shields.io/badge/LIVE_DEMO-ffb300?style=flat-square&labelColor=050b18)](https://test-schedule-ittl.netlify.app) |
-| 📡 | [**Industrial Data System**](https://github.com/KRISH-exe-29/indotech-transformers) | QR-based data collection, multi-department portal, OTP admin login, interactive 3D transformer model | `JavaScript` `React` `Three.js` `Netlify` | [![](https://img.shields.io/badge/LIVE_APP-ffb300?style=flat-square&labelColor=050b18)](https://indotech-transformers.netlify.app) |
-| 🧰 | [**RTCC & M.Box Tracker**](https://github.com/KRISH-exe-29/Pannel-Box-Transformers-) | Inspection → testing → clearance for RTCC panels & marshalling boxes. Auto-chases pending clearance with 48h emails | `JavaScript` `Express` `Node.js` `PostgreSQL` | ![](https://img.shields.io/badge/IN_USE-00e5ff?style=flat-square&labelColor=050b18) |
-| 📅 | [**EPMS Project HQ**](https://github.com/KRISH-exe-29/PMS) | Glassmorphic project management HQ with interactive Gantt charts, milestone tracking & team roles | `TypeScript` `React` `Express` `Tailwind` `Supabase` | ![](https://img.shields.io/badge/BUILT-7cf9ff?style=flat-square&labelColor=050b18) |
-| 🔩 | [**Fasteners Automation**](https://github.com/KRISH-exe-29/Fasteners-Project) | Drop hardware PDF, get weighted BOM in Excel + PDF report. Replaced 30-minute manual tasks with &lt;30s execution | `Python` `Streamlit` `PyQt5` `Pandas` | ![](https://img.shields.io/badge/SHIPPED-00e5ff?style=flat-square&labelColor=050b18) |
-| 🧠 | [**dMAT Master Practice**](https://github.com/KRISH-exe-29/Dmat-Practice) | Exam simulator built in **one HTML file**: timed mock tests, per-question timing & weakness analytics | `HTML5` `CSS3` `JavaScript` | ![](https://img.shields.io/badge/SHIPPED-7cf9ff?style=flat-square&labelColor=050b18) |
-| 🤖 | [**AI PDF Chatbot Agent**](https://github.com/KRISH-exe-29/AI-PDF-Chatbot-Agent-Powered-by-LangChain-and-LangGraph) | Conversational RAG agent over multi-page PDF documents with graph memory | `TypeScript` `LangChain` `LangGraph` `Node.js` | ![](https://img.shields.io/badge/BUILT-7cf9ff?style=flat-square&labelColor=050b18) |
-| 🤖 | [**GPT PR Reviewer**](https://github.com/KRISH-exe-29/GPT-based-PR-reviewer-) | Automated AI pull request code reviewer with inline suggestions & security audit | `TypeScript` `OpenAI API` `GitHub Actions` | ![](https://img.shields.io/badge/BUILT-7cf9ff?style=flat-square&labelColor=050b18) |
-
-<div align="center">
-<a href="https://github.com/KRISH-exe-29/transformer-test-planner"><img src="https://github-readme-stats.vercel.app/api/pin/?username=KRISH-exe-29&repo=transformer-test-planner&bg_color=050b18&title_color=00e5ff&icon_color=ffb300&text_color=9fb7d6&border_color=12345a" alt="Transformer Test Planner"/></a>
-<a href="https://github.com/KRISH-exe-29/indotech-transformers"><img src="https://github-readme-stats.vercel.app/api/pin/?username=KRISH-exe-29&repo=indotech-transformers&bg_color=050b18&title_color=00e5ff&icon_color=ffb300&text_color=9fb7d6&border_color=12345a" alt="IndoTech Transformers"/></a>
-</div>
-
-<img src="./assets/divider.svg" width="100%" alt=""/>
-
-<!-- ══════════ LANGUAGES (assets/languages.svg — measured from my repos) ══════════ -->
-<h2 align="center">🧬 What my code is made of</h2>
-
-<div align="center">
-<img src="./assets/languages.svg" width="720" alt="JavaScript, TypeScript, HTML, Python, CSS, SQL"/>
-</div>
-
-<!-- ══════════ STACK ══════════ -->
-<h2 align="center">🔌 The Stack I Actually Ship With</h2>
+---
 
 <div align="center">
 
-**⚡ Electrical & Industrial Engineering**<br/>
-![MCC Panel Engineering](https://img.shields.io/badge/MCC_Panel_Engineering-050b18?style=flat-square&logo=autodesk&logoColor=00e5ff)
-![Transformer Testing IEC 60076](https://img.shields.io/badge/Transformer_Testing_IEC_60076-050b18?style=flat-square&logo=ieee&logoColor=ffb300)
-![Feeder Classification](https://img.shields.io/badge/Feeder_Classification-050b18?style=flat-square&logo=lightning&logoColor=00e5ff)
-![Protection Relays](https://img.shields.io/badge/Relays_87T%2F63%2F64REF-050b18?style=flat-square&logo=shield&logoColor=7cf9ff)
-![OLTC Systems](https://img.shields.io/badge/OLTC_%26_Tap_Changers-050b18?style=flat-square&logo=settings&logoColor=ffb300)
+## ✨ The Most Visual, Interactive AI Learning Journey Ever
 
-<br/>
+**No Theory. No Lectures. No Boring Docs.**  
+**Just Pure, Hands-On, See-It-Work Learning.**
 
-**Languages**<br/>
-<img src="https://skillicons.dev/icons?i=js,ts,python,html,css,postgres,c,java&theme=dark" alt="JavaScript, TypeScript, Python, HTML, CSS, SQL"/>
-
-<br/>
-
-**Frontend & Motion**<br/>
-<img src="https://skillicons.dev/icons?i=react,vite,tailwind,threejs&theme=dark" alt="React, Vite, Tailwind, Three.js"/><br/>
-![Streamlit](https://img.shields.io/badge/Streamlit-050b18?style=flat-square&logo=streamlit&logoColor=ff4b4b)
-![PyQt5](https://img.shields.io/badge/PyQt5-050b18?style=flat-square&logo=qt&logoColor=41cd52)
-![Lucide](https://img.shields.io/badge/Lucide-050b18?style=flat-square&logo=lucide&logoColor=f56565)
-
-<br/>
-
-**Backend & Data**<br/>
-<img src="https://skillicons.dev/icons?i=nodejs,express,supabase,postgres,sqlite,netlify&theme=dark" alt="Node.js, Express, Supabase, PostgreSQL, SQLite"/><br/>
-![Nodemailer](https://img.shields.io/badge/Nodemailer-050b18?style=flat-square&logo=minutemailer&logoColor=00e5ff)
-![node-cron](https://img.shields.io/badge/node--cron-050b18?style=flat-square&logo=clockify&logoColor=ffb300)
-![ExcelJS](https://img.shields.io/badge/ExcelJS-050b18?style=flat-square&logo=microsoftexcel&logoColor=21a366)
-
-<br/>
-
-**AI & Intelligent Agents**<br/>
-![LangChain](https://img.shields.io/badge/LangChain-050b18?style=flat-square&logo=langchain&logoColor=00e5ff)
-![LangGraph](https://img.shields.io/badge/LangGraph-050b18?style=flat-square&logo=diagram&logoColor=ffb300)
-![OpenAI GPT](https://img.shields.io/badge/OpenAI_GPT-050b18?style=flat-square&logo=openai&logoColor=7cf9ff)
-![Transformers.js](https://img.shields.io/badge/Transformers.js-050b18?style=flat-square&logo=huggingface&logoColor=ffd21e)
-
-<br/>
-
-**Hardware, IoT & Embedded**<br/>
-<img src="https://skillicons.dev/icons?i=arduino,raspberrypi,linux&theme=dark" alt="Hardware platform icons"/><br/>
-![ESP8266](https://img.shields.io/badge/ESP8266-050b18?style=flat-square&logo=espressif&logoColor=e7352c)
-![GPS Module](https://img.shields.io/badge/GPS_Fault_Detection-050b18?style=flat-square&logo=googlemaps&logoColor=00e5ff)
-![Proteus](https://img.shields.io/badge/Proteus_Simulation-050b18?style=flat-square&logo=cpu&logoColor=7cf9ff)
-
-<br/>
-
-**Ship & Guard**<br/>
-<img src="https://skillicons.dev/icons?i=git,github,githubactions,vscode,windows&theme=dark" alt="Git, GitHub, Actions, VS Code, Windows"/>
+[🎯 Quick Start](#quick-start) • [📚 Full Path](#visual-learning-structure) • [🎮 Interactive](#how-to-learn) • [🏆 What You'll Build](#what-you-will-build)
 
 </div>
 
-<img src="./assets/divider.svg" width="100%" alt=""/>
+---
 
-<!-- ══════════ RECOGNITION ══════════ -->
-<h2 align="center">🏆 Recognition & Credentials</h2>
+## 🎬 The Vision
 
-<div align="center">
-
-| Status | Achievement | Institution / Body | Year |
-|:---:|:---|:---|:---:|
-| 📜 | **Patent Holder** — Intelligent Street Lighting System with Automated Fault Detection | Government of India | 2025 |
-| 🥇 | **National Rank #7** (out of 1500+ Colleges Asia-wide) | IIT Bombay NEC | 2025 |
-| 🥈 | **Runner-Up** — Fish Tank Pitch Event | IIT Bombay E-Summit | 2025 |
-| 🎯 | **National Finalist** — Competitive Engineering Event | Technical Symposium | 2024 |
-
-</div>
-
-<img src="./assets/divider.svg" width="100%" alt=""/>
-
-<!-- ══════════ METERS ══════════ -->
-<h2 align="center">📟 Meter Readings</h2>
-
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=KRISH-exe-29&show_icons=true&include_all_commits=true&count_private=true&bg_color=050b18&title_color=00e5ff&icon_color=ffb300&text_color=9fb7d6&border_color=12345a" alt="GitHub stats"/>
-<img height="165" src="https://streak-stats.demolab.com?user=KRISH-exe-29&background=050b18&border=12345a&ring=00e5ff&fire=ffb300&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=00e5ff&sideLabels=9fb7d6&dates=9fb7d6" alt="Streak"/>
-
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=KRISH-exe-29&bg_color=050b18&color=9fb7d6&line=00e5ff&point=ffb300&area=true&area_color=00e5ff&hide_border=true&title_color=00e5ff" alt="Contribution activity graph"/>
-
-<img src="https://github-profile-trophy.vercel.app/?username=KRISH-exe-29&theme=darkhub&no-frame=true&no-bg=true&margin-w=6&column=7" alt="Trophies"/>
-
-</div>
-
-<img src="./assets/divider.svg" width="100%" alt=""/>
-
-<!-- ══════════ ARCADE (rebuilt nightly from my contributions by .github/workflows) ══════════ -->
-<h2 align="center">🕹️ The Arcade</h2>
-<p align="center"><sub>Every game below is played <b>on my real contribution graph</b> and rebuilt every night. More commits = longer levels.</sub></p>
-
-<div align="center">
-
-**🚀 Space Shooter**: my commits are the alien fleet<br/>
-<img src="./assets/space-shooter.gif" width="100%" alt="Space shooter blasting the contribution graph"/>
-
-**🐍 Snake**: eats every green square I earn<br/>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KRISH-exe-29/KRISH-exe-29/output/snake-dark.svg"/>
-  <img alt="Snake eating the contribution grid" src="https://raw.githubusercontent.com/KRISH-exe-29/KRISH-exe-29/output/snake.svg"/>
-</picture>
-
-</div>
-
-<details>
-<summary><b>👾 Insert coin for Pac-Man</b></summary>
-<br/>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KRISH-exe-29/KRISH-exe-29/output/pacman-contribution-graph-dark.svg"/>
-  <img alt="Pac-Man eating the contribution graph" src="https://raw.githubusercontent.com/KRISH-exe-29/KRISH-exe-29/output/pacman-contribution-graph.svg"/>
-</picture>
-</details>
-
-<details>
-<summary><b>🧱 Insert coin for Breakout</b></summary>
-<br/>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KRISH-exe-29/KRISH-exe-29/output/breakout-contribution-graph-dark.svg"/>
-  <img alt="Breakout smashing the contribution graph" src="https://raw.githubusercontent.com/KRISH-exe-29/KRISH-exe-29/output/breakout-contribution-graph.svg"/>
-</picture>
-</details>
-
-<!-- ══════════ FOOTER ══════════ -->
-<div align="center">
-
-<br/>
-
-```text
- ┌────────────────────────────────────────────────────┐
- │  STATUS: ● ONLINE        LOAD: ████████░░  80%     │
- │  Got a process that eats your team's afternoon?    │
- │  Send it over. I'll turn it into a button.         │
- └────────────────────────────────────────────────────┘
+Transform from this:
+```
+👤 "What is an AI agent?"
 ```
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:050b18,50:0a3d62,100:00e5ff&height=120&section=footer&text=Thanks%20for%20powering%20up!&fontColor=ffffff&fontSize=20&fontAlignY=70" width="100%" alt=""/>
+To this:
+```
+🤖 "I planned it, did it, remembered it, checked it, 
+   coordinated with other agents, and automated the workflow."
+```
+
+**In just 12 progressive steps.**
+
+---
+
+## 🗺️ Your Learning Journey
+
+<div align="center">
+
+### Level 1: 🟢 Foundations (Hours 0-2)
+**Learn the basics: Chat → Read → Write → Plan**
+
+```
+┌─────────────┐
+│ 💬 CHAT     │  → You learn how agents communicate
+└─────────────┘
+       ↓
+┌─────────────┐
+│ 📖 READ     │  → You learn how agents access data
+└─────────────┘
+       ↓
+┌─────────────┐
+│ 🖊️ WRITE    │  → You learn how agents create files
+└─────────────┘
+       ↓
+┌─────────────┐
+│ 🎯 PLAN     │  → You learn how agents reason
+└─────────────┘
+
+⏱️ ~2 Hours | Skill Level: Beginner
+```
+
+---
+
+### Level 2: 🟡 Smart Systems (Hours 2-4.5)
+**Build production-grade capabilities: Tools → Memory → Safety → Reflection → Knowledge**
+
+```
+┌──────────────────────────────────────────────────┐
+│               PRODUCTION PATTERNS                 │
+├──────────────────────────────────────────────────┤
+│  🔧 TOOLS      → Organize capabilities           │
+│  💾 MEMORY     → Remember context                │
+│  🛡️ SAFETY     → Guard against mistakes          │
+│  🤔 REFLECT    → Self-improve through evaluation │
+│  📚 RETRIEVE   → Access external knowledge       │
+└──────────────────────────────────────────────────┘
+
+⏱️ ~2.5 Hours | Skill Level: Intermediate
+```
+
+---
+
+### Level 3: 🔴 Advanced Systems (Hours 4.5-7)
+**Master enterprise patterns: Routing → Multi-Agent → Workflow**
+
+```
+┌────────────────────────��─────────────────────────┐
+│              ENTERPRISE PATTERNS                  │
+├──────────────────────────────────────────────────┤
+│  🚦 ROUTING         → Smart task delegation      │
+│  🎭 MULTI-AGENT     → Agents working together    │
+│  ⚙️ WORKFLOW        → Full end-to-end automation │
+└──────────────────────────────────────────────────┘
+
+⏱️ ~2.5 Hours | Skill Level: Expert
+```
+
+</div>
+
+---
+
+## 📊 The Complete Progression
+
+<div align="center">
+
+```
+                        ┏━━━━━━━━━━━━━━━━━━━━┓
+                        ┃  ENTERPRISE READY  ┃
+                        ┗━━━━━━━━━━━━━━━━━━━━┛
+                                 ▲
+                                 │
+        ┌────────────────────────┼────────────────────────┐
+        │                        │                        │
+    ┌───┴────┐            ┌─────┴─────┐         ┌────────┴─────┐
+    │ V10    │            │ V11       │         │ V12          │
+    │ROUTING │────────→   │MULTI-     │────────→│WORKFLOW      │
+    │        │            │AGENT      │         │AUTOMATION    │
+    └────────┘            └───────────┘         └──────────────┘
+        ▲                      ▲                      ▲
+        │                      │                      │
+┌───────┴──────┐        ┌──────┴──────┐      ┌───────┴──────────┐
+│              │        │             │      │                  │
+│ V5-V9        │        │ Powered By: │      │ Enables:         │
+│ SMART SYSTEMS│        │ • Memory    │      │ • Full Automation│
+│              │        │ • Safety    │      │ • Scale Infinitely
+│• Tools       │        │ • Reflection│      │ • Enterprise Use │
+│• Memory      │        │ • Retrieval │      │                  │
+│• Safety      │        │             │      │                  │
+│• Reflection  │        └─────────────┘      └──────────────────┘
+│• Retrieval   │
+└──────────────┘
+        ▲
+        │
+┌───────┴──────────────────────────────────────┐
+│                                              │
+│           V1-V4: FOUNDATIONS                 │
+│                                              │
+│  • Basic Chat Agent                          │
+│  • File Reading Agent                        │
+│  • File Creation Agent                       │
+│  • Planning Agent                            │
+│                                              │
+└──────────────────────────────────────────────┘
+
+🟢 SIMPLE ──────────→ 🔴 COMPLEX ──────────→ 🔵 AUTONOMOUS SYSTEM
+```
+
+</div>
+
+---
+
+## 🎮 Three Learning Paths
+
+Choose your adventure:
+
+<div align="center">
+
+### 🟢 Path 1: Beginner (2 hours)
+**Master the Fundamentals**
+
+| Step | What | Time |
+|------|------|------|
+| **V1** | 💬 Basic Chat Agent | 10 min |
+| **V2** | 📖 File Reading Agent | 15 min |
+| **V3** | 🖊️ File Creation Agent | 15 min |
+| **V4** | 🎯 Planning Agent | 20 min |
+
+**Outcome:** Understand how agents think, observe, and act
+
+---
+
+### 🟡 Path 2: Intermediate (2.5 hours)
+**Build Production Systems**
+
+| Step | What | Time |
+|------|------|------|
+| **V5** | 🔧 Reusable Tool System | 20 min |
+| **V6** | 💾 Persistent Memory | 20 min |
+| **V7** | 🛡️ Safety & Approval | 20 min |
+| **V8** | 🤔 Reflection Engine | 25 min |
+| **V9** | 📚 Knowledge Retrieval (RAG) | 25 min |
+
+**Outcome:** Build agents that remember, validate, and learn
+
+---
+
+### 🔴 Path 3: Advanced (2.5 hours)
+**Master Enterprise Patterns**
+
+| Step | What | Time |
+|------|------|------|
+| **V10** | 🚦 Intelligent Routing | 25 min |
+| **V11** | 🎭 Multi-Agent System | 30 min |
+| **V12** | ⚙️ Workflow Automation | 30 min |
+
+**Outcome:** Scale to production-grade autonomous systems
+
+</div>
+
+---
+
+## 📚 VISUAL LEARNING STRUCTURE
+
+### 🟢 LEVEL 1: FOUNDATIONS (V1 → V4)
+
+#### What You'll Learn
+```
+┌────────────────────────────────────────────────────────────────┐
+│                        BUILD THE BASICS                        │
+│                                                                │
+│  These 4 versions teach you the CORE of how agents work      │
+└────────────────────────────────────────────────────────────────┘
+```
+
+#### V1: 💬 Basic Chat Agent
+```
+INPUT:  "Hello, how are you?"
+         │
+         ├─→ [LLM Processing]
+         │
+OUTPUT: "Hi there! I'm doing great, thanks for asking!"
+
+📍 Concepts: Prompt engineering, LLM interaction, conversation flow
+⏱️ Time: 10 minutes
+🎯 Outcome: Your first AI agent conversation
+```
+
+#### V2: 📖 File Reading Agent
+```
+INPUT:  "What's in this file?"
+         │
+         ├─→ [File System Access]
+         ├─→ [Read Contents]
+         ├─→ [Process with LLM]
+         │
+OUTPUT: File contents and AI-generated summary
+
+📍 Concepts: Tool use, file I/O, agent capabilities
+⏱️ Time: 15 minutes
+🎯 Outcome: Agents that can observe their environment
+```
+
+#### V3: 🖊️ File Creation Agent
+```
+INPUT:  "Create a TODO.md file"
+         │
+         ├─→ [Parse Request]
+         ├─→ [Create File]
+         ├─→ [Write Content]
+         │
+OUTPUT: ✓ File successfully created!
+
+📍 Concepts: Write operations, side effects, verification
+⏱️ Time: 15 minutes
+🎯 Outcome: Agents that can modify their environment
+```
+
+#### V4: 🎯 Planning Agent
+```
+INPUT:  "Build a Python project structure"
+         │
+         ├─→ [Plan: Step 1, Step 2, Step 3...]
+         ├─→ [Execute Step 1]
+         ├─→ [Execute Step 2]
+         ├─→ [Execute Step 3]
+         │
+OUTPUT: ✓ Complete project created
+
+📍 Concepts: Task decomposition, planning, execution
+⏱️ Time: 20 minutes
+🎯 Outcome: Agents that think before acting
+```
+
+---
+
+### 🟡 LEVEL 2: SMART SYSTEMS (V5 → V9)
+
+#### What You'll Learn
+```
+┌────────────────────────────────────────────────────────────────┐
+│                   ADD POWER & INTELLIGENCE                     │
+│                                                                │
+│  These 5 versions transform basic agents into production      │
+│  systems that are reliable, safe, and context-aware          │
+└────────────────────────────────────────────────────────────────┘
+```
+
+#### V5: 🔧 Tool Registry
+```
+BEFORE:
+  Tool 1 ────┐
+  Tool 2 ────├─→ Agent (messy!)
+  Tool 3 ────┘
+
+AFTER:
+  ┌──────────────────────┐
+  │   TOOL REGISTRY      │
+  ├──────────────────────┤
+  │ • Organized          │
+  │ • Type-safe          │
+  │ • Reusable           │
+  │ • Self-documenting   │
+  └──────────────────────┘
+           │
+           └─→ Agent (clean!)
+
+📍 Concepts: Architecture, abstraction, tool systems
+⏱️ Time: 20 minutes
+🎯 Outcome: Professional tool management patterns
+```
+
+#### V6: 💾 Persistent Memory
+```
+Before (Stateless):
+  Agent: "Hi!"
+  User: "What's your name?"
+  Agent: "I'm Claude, but I don't remember you..."
+
+After (Persistent):
+  Agent: "Hi! I'm Agent Builder"
+  User: "What's your name?"
+  Agent: "I'm Agent Builder. We've talked before!"
+  
+  ┌────────────────┐
+  │ MEMORY STORE   │
+  ├────────────────┤
+  │ • Conversations│
+  │ • Context      │
+  │ • Facts        │
+  │ • History      │
+  └────────────────┘
+
+📍 Concepts: State management, databases, context windows
+⏱️ Time: 20 minutes
+🎯 Outcome: Agents that maintain continuity
+```
+
+#### V7: 🛡️ Safety & Human Approval
+```
+Dangerous Operation Detected:
+  
+  Agent: "I want to delete all files"
+  System: "⚠️ This is DANGEROUS"
+  
+  ┌─────────────────────────────┐
+  │ Human Approval Required     │
+  ├─────────────────────────────┤
+  │ Approve this action? (Y/N)  │
+  └─────────────────────────────┘
+  
+  User: "N"
+  Agent: "✓ Operation cancelled safely"
+
+📍 Concepts: Guardrails, safety checks, approval workflows
+⏱️ Time: 20 minutes
+🎯 Outcome: Agents that respect boundaries
+```
+
+#### V8: 🤔 Reflection & Validation
+```
+Quality Assurance Loop:
+  
+  Step 1: Agent executes task
+  Step 2: Agent checks own work
+  Step 3: Did it succeed?
+    YES → Move on
+    NO  → Try again or report error
+  
+  Example:
+  Task: "Create README.md"
+  ✓ File created
+  ✓ File contains content
+  ✓ Validation passed
+  ✓ Task complete
+
+📍 Concepts: Validation loops, error handling, self-correction
+⏱️ Time: 25 minutes
+🎯 Outcome: Reliable, self-checking agents
+```
+
+#### V9: 📚 Knowledge Retrieval (RAG)
+```
+Problem: Agent doesn't know everything
+
+Solution: Knowledge Base + Retrieval
+
+  Query: "What is Python?"
+         │
+         ├─→ [Search Knowledge Base]
+         ├─→ [Find Relevant Docs]
+         ├─→ [Pass to LLM with Context]
+         │
+  Response: "Python is... [with sources]"
+
+  ┌──────────────┐
+  │ KB Structure │
+  ├──────────────┤
+  │ • Docs       │
+  │ • FAQs       │
+  │ • Examples   │
+  │ • Best Practices
+  └──────────────┘
+
+📍 Concepts: RAG, embeddings, semantic search, context injection
+⏱️ Time: 25 minutes
+🎯 Outcome: Agents with external knowledge
+```
+
+---
+
+### 🔴 LEVEL 3: ADVANCED SYSTEMS (V10 → V12)
+
+#### What You'll Learn
+```
+┌────────────────────────────────────────────────────────────────┐
+│                   SCALE WITH SPECIALIZATION                    │
+│                                                                │
+│  These 3 versions teach enterprise-grade patterns that       │
+│  enable scaling, specialization, and full automation        │
+└────────────────────────────────────────────────────────────────┘
+```
+
+#### V10: 🚦 Intelligent Routing
+```
+Complex Task:
+  
+  User: "Handle this request"
+  
+  ┌─────────────────┐
+  │  ROUTER AGENT   │ ← Decides who handles what
+  └────────┬────────┘
+           │
+      ┌────┼────┬──────────┐
+      │    │    │          │
+      ▼    ▼    ▼          ▼
+   File  Code Memory    API
+   Agent Agent Agent   Agent
+      │    │    │          │
+      └────┼────┴──────────┘
+           │
+    Output: ✓ Task handled by specialist
+
+📍 Concepts: Routing logic, task classification, specialization
+⏱️ Time: 25 minutes
+🎯 Outcome: Systems that delegate intelligently
+```
+
+#### V11: 🎭 Multi-Agent Coordination
+```
+Complex Workflow:
+  
+  ┌──────────────────────┐
+  │ COORDINATOR AGENT    │ ← Orchestrates work
+  └──────────┬───────────┘
+             │
+    ┌────────┼────────┐
+    │        │        │
+    ▼        ▼        ▼
+  File    Memory   Knowledge
+  Agent   Agent    Agent
+    │        │        │
+    │ (Parallel execution)
+    │        │        │
+    └────────┼────────┘
+             │
+        ┌────▼─────┐
+        │ Results  │
+        │Combined  │
+        └──────────┘
+
+📍 Concepts: Orchestration, parallelization, team dynamics
+⏱️ Time: 30 minutes
+🎯 Outcome: Agents working as a team
+```
+
+#### V12: ⚙️ Workflow Automation
+```
+User: "Build a complete Python package"
+
+AUTOMATIC EXECUTION:
+  
+  ✓ Plan structure
+  ✓ Create directories
+  ✓ Generate code files
+  ✓ Write configurations
+  ✓ Validate quality
+  ✓ Route to specialists
+  ✓ Coordinate teams
+  ✓ Document everything
+  ✓ Package for delivery
+  
+  RESULT: 📦 Complete, production-ready project
+
+📍 Concepts: Workflows, automation, end-to-end systems
+⏱️ Time: 30 minutes
+🎯 Outcome: Fully autonomous task execution
+```
+
+---
+
+## ⚡ How to Learn (The Method)
+
+<div align="center">
+
+### The 6-Step Learning Loop
+
+```
+FOR EACH VERSION:
+
+    Step 1️⃣
+    ┌─────────────┐
+    │ READ THE    │  Understand what this version does
+    │ VISUAL      │  See the purpose, see the flow
+    └─────────────┘
+           ↓
+    Step 2️⃣
+    ┌─────────────┐
+    │ RUN THE     │  cd vXX_<version>/
+    │ CODE        │  python main.py
+    └─────────────┘
+           ↓
+    Step 3️⃣
+    ┌─────────────┐
+    │ OBSERVE     │  What changed?
+    │ OUTPUT      │  What happened?
+    └─────────────┘
+           ↓
+    Step 4️⃣
+    ┌─────────────┐
+    │ READ SOURCE │  Now understand HOW
+    │ CODE        │  Deep dive into implementation
+    └───────────��─┘
+           ↓
+    Step 5️⃣
+    ┌─────────────┐
+    │ MODIFY &    │  Change parameters
+    │ EXPERIMENT  │  Add your own prompts
+    └─────────────┘
+           ↓
+    Step 6️⃣
+    ┌─────────────┐
+    │ MOVE TO     │  You learned ONE skill
+    │ NEXT        │  Level up to next challenge
+    └─────────────┘
+
+REPEAT × 12 = MASTER AGENTIC AI
+```
+
+</div>
+
+---
+
+## 🚀 Quick Start (5 minutes)
+
+### Prerequisites
+- Python 3.8+
+- Ollama installed & running
+- Git
+
+### Installation
+
+```bash
+# 1️⃣ Clone the repository
+git clone https://github.com/anushree-011/Agent-Builder.git
+cd Agent-Builder
+
+# 2️⃣ Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# 3️⃣ Install dependencies
+pip install -r requirements.txt
+
+# 4️⃣ Setup environment
+cp .env.example .env
+# Edit .env and add your Ollama API configuration
+```
+
+### Run Your First Agent (V1)
+
+```bash
+# Navigate to V1
+cd v01_basic_local_agent
+
+# Run the agent
+python basic_agent.py
+
+# Try this interaction:
+# You: "Hello! What can you do?"
+# Agent: "I'm an AI agent. I can chat, read files, create files..."
+```
+
+### Explore More
+
+```bash
+# V2: File Reading
+cd ../v02_file_reading_agent
+python file_agent.py
+
+# V3: File Creation
+cd ../v03_file_creation_agent
+python create_agent.py
+
+# And continue through V12...
+```
+
+---
+
+## 🎯 What You Will Build
+
+### After V1 (Chat)
+```
+✓ Your first AI agent conversation
+✓ Understanding of LLM interaction
+✓ Prompt engineering basics
+```
+
+### After V3 (File Creation)
+```
+✓ Agents that read AND write
+✓ File system integration
+✓ Agent side effects
+```
+
+### After V4 (Planning)
+```
+Agent: "I need to complete this task"
+Agent: "Step 1: Understand requirements"
+Agent: "Step 2: Create structure"
+Agent: "Step 3: Implement features"
+Agent: "Now executing..."
+```
+
+### After V7 (Safety)
+```
+User: "Delete all files"
+Agent: "⚠️ This is a DANGEROUS operation"
+Agent: "Do you REALLY want to proceed? (yes/no)"
+```
+
+### After V11 (Multi-Agent)
+```
+Coordinator: "This is complex work"
+Coordinator: "File Agent → handle file ops"
+Coordinator: "Memory Agent → maintain context"
+Coordinator: "Knowledge Agent → fetch info"
+
+All agents execute in parallel...
+
+Coordinator: "All tasks complete ✓"
+```
+
+### After V12 (Workflow)
+```
+User: "Build a complete data analysis pipeline"
+
+[AUTOMATIC PROCESS]
+✓ Plan architecture
+✓ Create project structure
+✓ Generate all code files
+✓ Write configuration
+✓ Validate best practices
+✓ Test integration
+✓ Generate documentation
+✓ Package for deployment
+
+Result: 📦 Production-ready pipeline
+```
+
+---
+
+## 🧠 The Big Picture
+
+```
+┌────────────────────────────────────────────────────────────────┐
+│                    YOUR LEARNING JOURNEY                       │
+└────────────────────────────────────────────────────────────────┘
+
+HOUR 1-2:  V1-V4: LEARN HOW AGENTS WORK
+           │
+           ├─ How they think
+           ├─ How they observe
+           ├─ How they act
+           └─ How they plan
+           
+           Result: You understand agent fundamentals
+
+HOUR 2-4.5: V5-V9: LEARN HOW TO BUILD REAL AGENTS
+           │
+           ├─ How to organize tools
+           ├─ How to maintain state
+           ├─ How to ensure safety
+           ├─ How to self-improve
+           └─ How to access knowledge
+           
+           Result: You can build production agents
+
+HOUR 4.5-7: V10-V12: LEARN HOW TO SCALE AGENTS
+           │
+           ├─ How to route intelligently
+           ├─ How to coordinate teams
+           └─ How to automate workflows
+           
+           Result: You can build enterprise systems
+
+FINAL OUTCOME: You understand the complete journey
+              from "Hello world" chatbot
+              to autonomous workflow systems
+```
+
+---
+
+## 🏆 By the End, You'll Understand
+
+```
+✓ How agents think and make decisions
+✓ How tools extend agent capabilities
+✓ How planning improves reliability
+✓ How memory creates continuity
+✓ How safety prevents accidents
+✓ How reflection enables self-improvement
+✓ How retrieval adds external knowledge
+✓ How routing handles complexity
+✓ How coordination scales systems
+✓ How workflows automate processes
+✓ The complete AI autonomy spectrum
+✓ Production-grade agent architecture
+```
+
+---
+
+## 📂 Project Structure
+
+```
+Agent-Builder/
+├── v01_basic_local_agent/          (💬 Chat)
+├── v02_file_reading_agent/         (📖 Read)
+├── v03_file_creation_agent/        (🖊️ Write)
+├── v04_planning_agent/             (🎯 Plan)
+├── v05_reusable_tool_system/       (🔧 Tools)
+├── v06_memory/                     (💾 Memory)
+├── v07_safety_and_human_approval/  (🛡️ Safety)
+├── v08_reflection_and_evaluation/  (🤔 Reflect)
+├── v09_rag_knowledge_system/       (📚 Retrieve)
+├── v10_agent_routing/              (🚦 Route)
+├── v11_multi_agent_system/         (🎭 Multi-Agent)
+├── v12_agentic_workflow_automation/ (⚙️ Workflow)
+├── requirements.txt
+├── .env.example
+└── README.md
+```
+
+---
+
+## 🔧 Tech Stack
+
+| Component | Technology |
+|-----------|-----------|
+| **LLM** | Ollama (Local) |
+| **Language** | Python 3.8+ |
+| **Memory** | SQLite / JSON |
+| **Knowledge** | Vector DB / File-based |
+| **APIs** | REST / Custom |
+| **Type Checking** | Type hints |
+
+---
+
+## 📚 Dependencies
+
+All dependencies are in `requirements.txt`:
+```
+ollama>=0.1.0
+python-dotenv>=0.19.0
+requests>=2.28.0
+```
+
+---
+
+## 🤝 How to Use This Repository
+
+### Option 1: Follow the Guided Path
+```
+Start at V1 → Follow the progression → Master V12
+Total time: ~7 hours
+Best for: Learning the full progression
+```
+
+### Option 2: Learn Specific Topics
+```
+Jump to any version that interests you
+Example: Want to learn RAG? Go to V9
+Best for: Targeted learning
+```
+
+### Option 3: Experiment & Modify
+```
+Pick a version → Run it → Modify the code → See what happens
+Change prompts, add new tools, experiment
+Best for: Hands-on learning
+```
+
+---
+
+## 🎓 Learning Tips
+
+1. **Don't Rush** - Spend time on each version
+2. **Run First** - See it work before reading code
+3. **Experiment** - Modify code, break it, fix it
+4. **Understand** - Don't just copy-paste
+5. **Document** - Write notes as you learn
+6. **Build** - Apply learnings to your own project
+
+---
+
+## 🐛 Troubleshooting
+
+### Ollama Not Connected
+```bash
+# Make sure Ollama is running
+ollama serve
+
+# In another terminal:
+ollama list  # Check available models
+```
+
+### Module Not Found
+```bash
+# Reinstall dependencies
+pip install -r requirements.txt --force-reinstall
+```
+
+### Permission Denied
+```bash
+# On macOS/Linux
+chmod +x *.py
+```
+
+---
+
+## 📖 Additional Resources
+
+- [Ollama Documentation](https://ollama.com)
+- [AI Agent Patterns](https://docs.anthropic.com/en/docs/build-a-chatbot-with-claude)
+- [LLM Best Practices](https://platform.openai.com/docs/guides/gpt-best-practices)
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+<div align="center">
+
+## 🎬 Ready to Master Agentic AI?
+
+### Start Your Journey Today
+
+```
+🟢 V1  →  🟡 V2  →  🟠 V3  →  🔴 V4
+  ↓        ↓        ↓        ↓
+🟣 V5  →  🔵 V6  →  ⚫ V7  →  🟤 V8
+  ↓        ↓        ↓        ↓
+🟪 V9  →  🟥 V10 →  🟦 V11 →  🟩 V12
+
+            MASTER AUTONOMOUS SYSTEMS
+```
+
+### Timeline
+- **Level 1**: ~2 hours (Beginner)
+- **Level 2**: ~2.5 hours (Intermediate)
+- **Level 3**: ~2.5 hours (Advanced)
+- **Total**: ~7 hours to expertise
+
+### Your New Skills
+- ✅ Agent Architecture
+- ✅ Tool Systems
+- ✅ Memory Management
+- ✅ Safety & Validation
+- ✅ RAG Implementation
+- ✅ Multi-Agent Coordination
+- ✅ Workflow Automation
+- ✅ Production Patterns
+
+---
+
+<br>
+
+### Made with ❤️ for AI Learners Everywhere
+
+**See. Understand. Build. Master.**
+
+*Questions or feedback? Open an issue on GitHub!*
+
+<br>
+
+![Version](https://img.shields.io/badge/Version-1.0-blue)
+![Status](https://img.shields.io/badge/Status-Active-green)
+![Contributors](https://img.shields.io/badge/Contributors-Welcome-brightgreen)
 
 </div>
